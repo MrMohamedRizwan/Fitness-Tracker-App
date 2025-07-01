@@ -1,0 +1,135 @@
+<div
+  class="container py-4"
+  class="flex-grow-1 px-3 pt-3 overflow-auto"
+  style="max-height: calc(95vh); overflow-y: auto"
+>
+  <h2 class="mb-1">Assign Plan</h2>
+  <p class="text-muted mb-4">Assign workout and diet plans to your clients</p>
+
+  <form (ngSubmit)="onSubmit()">
+    <!-- Client Section -->
+    <div class="mb-4">
+      <label class="form-label fw-semibold">Select Client</label>
+      <input
+        type="text"
+        class="form-control mb-3"
+        placeholder="Search client..."
+        [(ngModel)]="searchClient"
+        (ngModelChange)="filterList()"
+        name="searchClient"
+      />
+      <div class="row g-3">
+        <div class="col-md-6" *ngFor="let client of filteredClients">
+          <div
+            class="card cursor-pointer position-relative"
+            [class.border-primary]="selectedClient === client.id"
+            (click)="selectedClient = client.id"
+          >
+            <!-- Show-on-hover button -->
+            <button
+              type="button"
+              class="btn btn-sm position-absolute top-0 end-0 m-2 expand-btn"
+              style="color: #007bff; border-color: #007bff"
+              (click)="showDetails(client); $event.stopPropagation()"
+            >
+              <i class="bi bi-arrows-expand"></i>
+            </button>
+
+            <div class="card-body">
+              <h5 class="card-title mb-1">{{ client.name }}</h5>
+              <p class="card-text small text-muted">{{ client.email }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Workout Plan Section -->
+    <div class="mb-4">
+      <label class="form-label fw-semibold">Select Workout Plan</label>
+      <input
+        type="text"
+        class="form-control mb-3"
+        placeholder="Search workout..."
+        [(ngModel)]="searchWorkout"
+        (ngModelChange)="filteWorkkoutList()"
+        name="searchWorkout"
+      />
+      <div class="row g-3">
+        <div class="col-md-6" *ngFor="let plan of filteredWorkouts">
+          <div
+            class="card cursor-pointer"
+            [class.border-info]="selectedWorkoutPlan === plan.id"
+            (click)="selectedWorkoutPlan = plan.id"
+          >
+            <button
+              type="button"
+              class="btn btn-sm position-absolute top-0 end-0 m-2 expand-btn"
+              style="color: #007bff; border-color: #007bff"
+              (click)="showDetails(plan); $event.stopPropagation()"
+            >
+              <i class="bi bi-arrows-expand"></i>
+            </button>
+            <div class="card-body">
+              <h5 class="card-title mb-1">{{ plan.title }}</h5>
+              <p class="card-text small text-muted">{{ plan.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Diet Plan Section -->
+    <div class="mb-4">
+      <label class="form-label fw-semibold">Select Diet Plan</label>
+      <input
+        type="text"
+        class="form-control mb-3"
+        placeholder="Search diet..."
+        [(ngModel)]="searchDiet"
+        (ngModelChange)="filteDietList()"
+        name="searchDiet"
+      />
+      <div class="row g-3">
+        <div class="col-md-6" *ngFor="let plan of filteredDiets">
+          <div
+            class="card cursor-pointer"
+            [class.border-success]="selectedDietPlan === plan.id"
+            (click)="selectedDietPlan = plan.id"
+          >
+            <button
+              type="button"
+              class="btn btn-sm position-absolute top-0 end-0 m-2 expand-btn"
+              style="color: #007bff; border-color: #007bff"
+              (click)="showDetails(plan); $event.stopPropagation()"
+            >
+              <i class="bi bi-arrows-expand"></i>
+            </button>
+
+            <div class="card-body">
+              <h5 class="card-title mb-1">{{ plan.title }}</h5>
+              <p class="card-text small text-muted">{{ plan.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Select Due Date</label>
+        <input
+          type="date"
+          class="form-control"
+          [(ngModel)]="dueDate"
+          name="startDate"
+          required
+        />
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="text-end">
+      <button type="submit" class="btn btn-primary" [disabled]="isSubmitting">
+        {{ isSubmitting ? 'Assigning...' : 'Assign Plan' }}
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,38 @@
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="card p-4 shadow" style="min-width: 350px; max-width: 400px; width: 100%;">
+    <h3 class="text-center mb-3">Login</h3>
+
+    <!-- ✅ Alert messages -->
+    <div *ngIf="successMessage" class="alert alert-success d-flex align-items-center" role="alert">
+      <i class="bi bi-check-circle-fill me-2"></i> {{ successMessage }}
+    </div>
+    <div *ngIf="errorMessage" class="alert alert-danger d-flex align-items-center" role="alert">
+      <i class="bi bi-exclamation-triangle-fill me-2"></i> {{ errorMessage }}
+    </div>
+
+    <form [formGroup]="loginForm" (ngSubmit)="handleLogin()">
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input id="username" class="form-control" type="text" formControlName="username" placeholder="Enter username" />
+        <div class="text-danger small mt-1" *ngIf="loginForm.get('username')?.touched && loginForm.get('username')?.errors?.['required']">
+          <i class="bi bi-exclamation-circle-fill"></i> Please enter your username.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input id="password" class="form-control" type="password" formControlName="password" placeholder="Enter password" />
+        <div class="text-danger small mt-1" *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.errors?.['required']">
+          <i class="bi bi-exclamation-circle-fill"></i> Please enter your password.
+        </div>
+      </div>
+
+      <button class="btn btn-success w-100" type="submit" [disabled]="loginForm.invalid">Login</button>
+
+      <div class="mt-3 text-center">
+        <span>New user?</span>
+        <a routerLink="/signup" class="ms-1">Sign up here</a>
+      </div>
+    </form>
+  </div>
+</div>

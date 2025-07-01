@@ -1,0 +1,18 @@
+:host {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+.toast {
+  transform: translateY(100%);
+  animation: slide-up 0.5s ease-out forwards;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}

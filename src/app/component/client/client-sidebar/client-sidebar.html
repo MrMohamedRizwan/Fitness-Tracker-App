@@ -1,0 +1,41 @@
+<div
+  class="d-flex flex-column bg-white border-end shadow-sm"
+  style="height: 100vh; width: max-content"
+>
+  <div class="p-4 border-bottom">
+    <div class="d-flex align-items-center gap-3">
+      <div
+        class="bg-primary text-white rounded-circle d-flex justify-content-center align-items-center"
+        style="width: 40px; height: 40px"
+      >
+        <i class="bi bi-activity"></i>
+      </div>
+      <div>
+        <h5 class="mb-0">FitTracker</h5>
+        <small class="text-muted text-capitalize">Client</small>
+      </div>
+    </div>
+  </div>
+
+  <nav
+    class="flex-grow-1 px-3 pt-3 overflow-auto"
+    style="max-height: calc(100vh - 120px); overflow-y: auto"
+  >
+    <a
+      *ngFor="let link of links"
+      [routerLink]="link.to"
+      routerLinkActive="active bg-primary text-white"
+      class="d-flex align-items-center gap-2 py-2 px-3 mb-2 rounded text-decoration-none text-dark"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      <i [class]="link.icon"></i>
+      {{ link.label }}
+    </a>
+  </nav>
+
+  <div class="p-3 border-top">
+    <button class="btn btn-outline-secondary w-100" (click)="handleLogout()">
+      Sign Out
+    </button>
+  </div>
+</div>

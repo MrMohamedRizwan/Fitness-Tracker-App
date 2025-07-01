@@ -1,0 +1,204 @@
+<div class="container mt-4">
+  <h2 class="mb-4">Create New Plan</h2>
+
+  <form [formGroup]="planForm" (ngSubmit)="onSubmit()">
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="planType" class="form-label">Plan Type</label>
+        <select class="form-select" formControlName="planType">
+          <option value="workout">Workout</option>
+          <option value="diet">Diet</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label for="durationInWeeks" class="form-label">Duration (weeks)</label>
+        <input
+          type="number"
+          class="form-control"
+          formControlName="durationInWeeks"
+          placeholder="e.g., 4"
+          required
+        />
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="planName" class="form-label">Plan Name</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="planName"
+        required
+        placeholder="Enter plan name"
+      />
+    </div>
+
+    <div class="mb-4">
+      <label for="description" class="form-label">Description</label>
+      <textarea
+        rows="3"
+        class="form-control"
+        formControlName="description"
+        placeholder="Plan goals and overview"
+        required
+      ></textarea>
+    </div>
+
+    <!-- Workout Plan: Exercises -->
+    <div
+      *ngIf="planForm.value.planType === 'workout'"
+      formArrayName="exercises"
+    >
+      <h5>Exercises</h5>
+      <div
+        *ngFor="let exercise of exercises.controls; let i = index"
+        [formGroupName]="i"
+        class="card p-3 mb-3"
+      >
+        <div class="row g-2 align-items-end">
+          <div class="col-md-4">
+            <label class="form-label">Exercise Name</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="name"
+              placeholder="e.g., Push-ups"
+              required
+            />
+          </div>
+          <div class="col-md-2">
+            <label class="form-label">Sets</label>
+            <input type="text" class="form-control" formControlName="sets" />
+          </div>
+          <div class="col-md-2">
+            <label class="form-label">Reps</label>
+            <input type="text" class="form-control" formControlName="reps" />
+          </div>
+          <div class="col-md-2">
+            <label class="form-label">Rest Seconds (min)</label>
+            <input
+              type="number"
+              class="form-control"
+              formControlName="restSeconds"
+            />
+          </div>
+          <div class="col-md-2">
+            <label class="form-label">Calories Burnt</label>
+            <input
+              type="number"
+              class="form-control"
+              formControlName="caloriesBurnt"
+            />
+          </div>
+          <div class="col-md-12">
+            <label class="form-label">Notes</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="notes"
+              placeholder="Optional notes for this exercise"
+            />
+          </div>
+        </div>
+        <div class="text-end mt-2">
+          <button
+            class="btn btn-outline-danger btn-sm"
+            type="button"
+            (click)="removeExercise(i)"
+            *ngIf="exercises.length > 1"
+          >
+            Remove
+          </button>
+        </div>
+      </div>
+      <button
+        class="btn btn-primary btn-sm mb-4"
+        type="button"
+        (click)="addExercise()"
+      >
+        Add Exercise
+      </button>
+    </div>
+
+    <!-- Diet Plan: Meals -->
+    <div
+      *ngIf="planForm.value.planType === 'diet' && meals?.length"
+      formArrayName="meals"
+    >
+      <h5>Meals</h5>
+      <div
+        *ngFor="let meal of meals.controls; let i = index"
+        [formGroupName]="i"
+        class="card p-3 mb-3"
+      >
+        <div class="row g-3 mb-2">
+          <div class="col-md-12">
+            <label class="form-label">Meal Name</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="name"
+              placeholder="e.g., Grilled Chicken Salad"
+              required
+            />
+          </div>
+        </div>
+        <div class="row g-3">
+          <div class="col-md-3">
+            <label class="form-label">Meal Type</label>
+            <select class="form-select" formControlName="mealType" required>
+              <option value="" disabled selected>Select type</option>
+              <option value="breakfast">Breakfast</option>
+              <option value="lunch">Lunch</option>
+              <option value="dinner">Dinner</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Calories</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="calories"
+            />
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Protein (g)</label>
+            <input type="text" class="form-control" formControlName="protein" />
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Carbs (g)</label>
+            <input type="text" class="form-control" formControlName="carbs" />
+          </div>
+          <div class="col-md-3">
+            <label class="form-label">Fats (g)</label>
+            <input type="text" class="form-control" formControlName="fats" />
+          </div>
+        </div>
+        <div class="text-end mt-2">
+          <button
+            class="btn btn-outline-danger btn-sm"
+            type="button"
+            (click)="removeMeal(i)"
+            *ngIf="meals.length > 1"
+          >
+            Remove
+          </button>
+        </div>
+      </div>
+      <button
+        class="btn btn-primary btn-sm mb-4"
+        type="button"
+        (click)="addMeal()"
+      >
+        Add Meal
+      </button>
+    </div>
+
+    <div class="d-flex justify-content-end gap-2">
+      <button type="button" class="btn btn-outline-secondary">
+        Save as Draft
+      </button>
+      <button type="submit" class="btn btn-success">Create Plan</button>
+    </div>
+  </form>
+</div>

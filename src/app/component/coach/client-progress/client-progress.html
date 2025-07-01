@@ -1,0 +1,305 @@
+<div class="client-progress">
+  <div style="padding: 0 10%">
+    <div *ngIf="client() as c" class="container mt-5">
+      <div class="card shadow border-primary">
+        <div
+          class="card-header bg-primary text-white d-flex align-items-center"
+        >
+          <div
+            class="rounded-circle bg-light text-primary d-flex justify-content-center align-items-center me-3"
+            style="width: 50px; height: 50px; font-size: 1.5rem"
+          >
+            {{ c.name.charAt(0).toUpperCase() }}
+          </div>
+          <div>
+            <h5 class="mb-0">{{ c.name }}</h5>
+            <small>{{ c.email }}</small>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row mb-2">
+            <div class="col-md-6"><strong>Phone:</strong> {{ c.phone }}</div>
+            <div class="col-md-6"><strong>Gender:</strong> {{ c.gender }}</div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-md-6"><strong>Age:</strong> {{ c.age }}</div>
+            <div class="col-md-6"><strong>Goal:</strong> {{ c.goal }}</div>
+          </div>
+          <div class="row mb-2">
+            <div class="col-md-6">
+              <strong>Height:</strong> {{ c.height }} cm
+            </div>
+            <div class="col-md-6">
+              <strong>Weight:</strong> {{ c.weight }} kg
+            </div>
+          </div>
+        </div>
+        <div class="card-footer text-muted">
+          <button
+            class="btn btn-outline-primary float-end"
+            (click)="progressButton()"
+          >
+            View Progress
+          </button>
+          <br />
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="!client()" class="container text-center mt-5">
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <p class="mt-2">Loading client data...</p>
+    </div>
+    <!-- <app-calender-component></app-calender-component> -->
+  </div>
+
+  <div *ngIf="client() as c" class="container mt-4">
+    <div class="text-center mb-4">
+      <h3>{{ c.name }}'s Progress</h3>
+      <p>{{ c.email }}</p>
+    </div>
+    <div class="row justify-content-center">
+      <!-- Workout Plans -->
+      <div class="col-md-6 d-flex flex-column align-items-center">
+        <h5 class="text-primary mb-3 text-center" style="margin-right: 2rem">
+          Workout Plans In Progress
+        </h5>
+        <div
+          class="horizontal-scroll d-flex flex-row justify-content-center overflow-auto pb-2 w-100"
+        >
+          <div
+            *ngFor="let plan of workoutPlans()"
+            class="card mb-3 me-3 shadow workout-card"
+            style="min-width: 260px; max-width: 280px"
+          >
+            <div
+              class="card-header bg-primary text-white d-flex align-items-center"
+            >
+              <i class="bi bi-barbell me-2"></i>
+              <span>{{ plan.workoutPlanTitle }}</span>
+            </div>
+            <div class="card-body">
+              <p class="mb-2">
+                <small>
+                  <i class="bi bi-calendar-event"></i>
+                  {{ plan.assignedOn ? (plan.assignedOn | date:'mediumDate') :
+                  'N/A' }} &rarr; {{ plan.dueDate ? (plan.dueDate |
+                  date:'mediumDate') : 'N/A' }}
+                </small>
+              </p>
+              <div class="mb-2">
+                <div class="d-flex justify-content-between small mb-1">
+                  <span>Progress</span>
+                  <span>{{ plan.progressPercentage }}%</span>
+                </div>
+                <div class="progress" style="height: 6px">
+                  <div
+                    class="progress-bar bg-success"
+                    role="progressbar"
+                    [style.width.%]="plan.progressPercentage"
+                    [attr.aria-valuenow]="plan.progressPercentage"
+                    attr.aria-valuemin="0"
+                    attr.aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div
+                class="d-flex justify-content-between"
+                *ngIf="plan.status !== 'Completed'; else completedDietPlan"
+              >
+                <button
+                  class="btn btn-outline-success btn-sm"
+                  (click)="markAsCompleted(plan.planAssignmentId, 'workout'); plan.status = 'Completed'"
+                  title="Mark as Completed"
+                >
+                  Completed
+                  <i class="bi bi-check2-circle"></i>
+                </button>
+
+                <button
+                  class="btn btn-outline-danger btn-sm"
+                  (click)="cancelPlan(plan.id, 'workout')"
+                  title="Cancel Plan"
+                >
+                  Cancel
+                  <i class="bi bi-x-circle"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <ng-template #completedDietPlan>
+            <button
+              class="btn btn-outline-primary btn-sm w-100"
+              (click)="progressButton()"
+              title="View Progress"
+            >
+              View Progress
+              <i class="bi bi-graph-up"></i>
+            </button>
+          </ng-template>
+          <div
+            *ngIf="workoutPlans().length === 0"
+            class="text-muted align-self-center"
+          >
+            No workout plans.
+          </div>
+        </div>
+      </div>
+
+      <!-- Diet Plans -->
+      <div class="col-md-6 d-flex flex-column align-items-center">
+        <h5 class="text-success mb-3 text-center">Diet Plans In Progress</h5>
+        <div
+          class="horizontal-scroll d-flex flex-row justify-content-center overflow-auto pb-2 w-100"
+        >
+          <div
+            *ngFor="let plan of dietPlans()"
+            class="card mb-3 me-3 shadow diet-card"
+            style="min-width: 260px; max-width: 280px"
+          >
+            <div
+              class="card-header bg-success text-white d-flex align-items-center"
+            >
+              <i class="bi bi-egg-fried me-2"></i>
+              <span>{{ plan.dietPlanTitle }}</span>
+            </div>
+            <div class="card-body">
+              <p class="mb-2">
+                <small>
+                  <i class="bi bi-calendar-event"></i>
+                  {{ plan.assignedOn ? (plan.assignedOn | date:'mediumDate') :
+                  'N/A' }} &rarr; {{ plan.dueDate ? (plan.dueDate |
+                  date:'mediumDate') : 'N/A' }}
+                </small>
+              </p>
+              <div class="mb-2">
+                <div class="d-flex justify-content-between small mb-1">
+                  <span>Progress</span>
+                  <span>{{ plan.progressPercentage }}%</span>
+                </div>
+                <div class="progress" style="height: 6px">
+                  <div
+                    class="progress-bar bg-success"
+                    role="progressbar"
+                    [style.width.%]="plan.progressPercentage"
+                    [attr.aria-valuenow]="plan.progressPercentage"
+                    attr.aria-valuemin="0"
+                    attr.aria-valuemax="100"
+                  ></div>
+                </div>
+              </div>
+
+              <div
+                *ngIf="plan.status !== 'Completed'; else completedDietPlan"
+                class="d-flex justify-content-between"
+              >
+                <button
+                  class="btn btn-outline-success btn-sm"
+                  (click)="markAsCompleted(plan.planAssignmentId, 'diet')"
+                  title="Mark as Completed"
+                >
+                  Completed
+                  <i class="bi bi-check2-circle"></i>
+                </button>
+                <button
+                  class="btn btn-outline-danger btn-sm"
+                  (click)="cancelPlan(plan.id, 'diet')"
+                  title="Cancel Plan"
+                >
+                  Cancel
+                  <i class="bi bi-x-circle"></i>
+                </button>
+              </div>
+              <ng-template #completedDietPlan>
+                <button
+                  class="btn btn-outline-primary btn-sm w-100"
+                  (click)="progressButton()"
+                  title="View Progress"
+                >
+                  View Progress
+                  <i class="bi bi-graph-up"></i>
+                </button>
+              </ng-template>
+            </div>
+          </div>
+          <div
+            *ngIf="dietPlans().length === 0"
+            class="text-muted align-self-center"
+          >
+            No diet plans.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .horizontal-scroll::-webkit-scrollbar {
+        height: 8px;
+      }
+      .horizontal-scroll::-webkit-scrollbar-thumb {
+        background: #e0e0e0;
+        border-radius: 4px;
+      }
+      .horizontal-scroll {
+        scrollbar-color: #e0e0e0 #f8f9fa;
+        scrollbar-width: thin;
+      }
+      .workout-card {
+        border-top: 3px solid #0d6efd;
+      }
+      .diet-card {
+        border-top: 3px solid #198754;
+      }
+    </style>
+    <div class="container mt-4 text-center">
+      <button class="btn btn-outline-primary" (click)="showAllPlans()">
+        View All Plans
+      </button>
+    </div>
+  </div>
+
+  <!-- Loading Spinner -->
+  <div *ngIf="!client()" class="text-center mt-5">
+    <div class="spinner-border text-primary" role="status"></div>
+    <p>Loading client data...</p>
+  </div>
+
+  <!-- All Plans Modal -->
+  <div
+    class="modal fade"
+    id="allPlansModal"
+    tabindex="-1"
+    aria-labelledby="allPlansModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="allPlansModalLabel">
+            All Assigned Plans
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div *ngIf="allPlans().length === 0">No plans assigned.</div>
+          <ul class="list-group" *ngIf="allPlans().length > 0">
+            <li *ngFor="let p of allPlans()" class="list-group-item">
+              {{ p.workoutPlanTitle || p.dietPlanTitle }} – Status: {{ p.status
+              || 'In Progress' }}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <app-calender-component [clientId]="this.clientId"></app-calender-component>
+</div>

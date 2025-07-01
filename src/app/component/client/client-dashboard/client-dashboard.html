@@ -1,0 +1,191 @@
+<div class="container min-vh-100 d-flex">
+  <!-- Main content -->
+  <main class="flex-grow-1 p-4">
+    <div class="container">
+      <!-- Welcome and Quote -->
+      <div class="mb-5">
+        <h1 class="h3 fw-bold text-dark mb-2">
+          Welcome back, {{ this.client().name }}!
+        </h1>
+        <p class="text-muted">Here's your fitness overview for today.</p>
+        <div class="alert alert-primary fw-medium fst-italic">
+          <app-quotes></app-quotes>
+        </div>
+      </div>
+
+      <!-- Dashboard Cards -->
+      <div class="row g-4 mb-5">
+        <!-- Diet Plan -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <h5 class="card-title mb-0">Current Diet Plan</h5>
+                <i class="bi bi-journal-text text-info fs-4"></i>
+              </div>
+
+              <ng-container *ngIf="dietPlans().length > 0">
+                <h6 class="fw-semibold text-dark">
+                  {{ dietPlans()[0].dietPlanTitle }}
+                </h6>
+                <p class="text-muted small mb-2">
+                  Assigned on: {{ dietPlans()[0].assignedOn | date: 'mediumDate'
+                  }}
+                </p>
+                <div class="d-flex justify-content-between small mb-1">
+                  <span>Status</span>
+                  <span>{{ dietPlans()[0].status }}</span>
+                </div>
+                <div class="mb-2">
+                  <div class="d-flex justify-content-between small mb-1">
+                    <span>Progress</span>
+                    <span>{{ dietPlans()[0].progressPercentage }}%</span>
+                  </div>
+                  <div class="progress" style="height: 6px">
+                    <div
+                      class="progress-bar bg-success"
+                      role="progressbar"
+                      [style.width.%]="dietPlans()[0].progressPercentage"
+                      [attr.aria-valuenow]="dietPlans()[0].progressPercentage"
+                      attr.aria-valuemin="0"
+                      attr.aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </ng-container>
+
+              <div *ngIf="dietPlans().length === 0" class="text-muted small">
+                No diet plan assigned yet.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Workout Plan -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <h5 class="card-title mb-0">Current Workout</h5>
+                <i class="bi bi-barbell text-primary fs-4"></i>
+              </div>
+
+              <ng-container *ngIf="workoutPlans().length > 0">
+                <h6 class="fw-semibold text-dark">
+                  {{ workoutPlans()[0].workoutPlanTitle }}
+                </h6>
+                <p class="text-muted small mb-2">
+                  Assigned on: {{ workoutPlans()[0].assignedOn | date:
+                  'mediumDate' }}
+                </p>
+                <div class="d-flex justify-content-between small mb-1">
+                  <span>Status</span>
+                  <span>{{ workoutPlans()[0].status }}</span>
+                </div>
+                <div class="mb-2">
+                  <div class="d-flex justify-content-between small mb-1">
+                    <span>Progress</span>
+                    <span>{{ workoutPlans()[0].progressPercentage }}%</span>
+                  </div>
+                  <div class="progress" style="height: 6px">
+                    <div
+                      class="progress-bar bg-success"
+                      role="progressbar"
+                      [style.width.%]="workoutPlans()[0].progressPercentage"
+                      [attr.aria-valuenow]="workoutPlans()[0].progressPercentage"
+                      attr.aria-valuemin="0"
+                      attr.aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </ng-container>
+
+              <div *ngIf="workoutPlans().length === 0" class="text-muted small">
+                No workout plan assigned yet.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Progress Summary -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card shadow-sm h-100">
+            <div class="card-body">
+              <div
+                class="d-flex justify-content-between align-items-center mb-3"
+              >
+                <h5 class="card-title mb-0">Progress Summary</h5>
+                <i class="bi bi-graph-up-arrow text-success fs-4"></i>
+              </div>
+              <ul class="list-group list-group-flush small">
+                <li class="list-group-item d-flex justify-content-between px-0">
+                  <span>Height</span>
+                  <span class="fw-semibold">{{ this.client().height }} cm</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between px-0">
+                  <span>Current Weight</span>
+                  <span class="fw-semibold">{{ this.client().weight }} kg</span>
+                </li>
+                <li class="list-group-item d-flex justify-content-between px-0">
+                  <span>Goal Weight</span>
+                  <span class="fw-semibold">{{ this.client().goal }} </span>
+                </li>
+              </ul>
+              <div
+                class="border-top pt-2 mt-2 text-success d-flex justify-content-between small fw-semibold"
+              >
+                <span>Progress</span>
+                <span
+                  >-{{ this.client().currentWeight - this.client().goalWeight }}
+                  kg</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title mb-3">Recent Activity</h5>
+          <p class="text-muted small mb-4">Your latest fitness activities</p>
+
+          <div class="d-flex align-items-center bg-light rounded p-3 mb-3">
+            <div
+              class="me-3 bg-success bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center"
+              style="width: 40px; height: 40px"
+            >
+              <i class="bi bi-dumbbell text-success fs-5"></i>
+            </div>
+            <div class="flex-grow-1">
+              <p class="mb-0 fw-medium">Completed workout session</p>
+              <small class="text-muted">Upper body strength training</small>
+            </div>
+            <small class="text-muted ms-3">2 hours ago</small>
+          </div>
+
+          <div class="d-flex align-items-center bg-light rounded p-3">
+            <div
+              class="me-3 bg-primary bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center"
+              style="width: 40px; height: 40px"
+            >
+              <i class="bi bi-bar-chart-line text-primary fs-5"></i>
+            </div>
+            <div class="flex-grow-1">
+              <p class="mb-0 fw-medium">Progress update</p>
+              <small class="text-muted">
+                Weight: {{ user.currentWeight }}kg, Body fat: 15%
+              </small>
+            </div>
+            <small class="text-muted ms-3">1 day ago</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

@@ -1,0 +1,18 @@
+.card {
+  border-radius: 12px;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+button.btn-sm {
+  min-width: 120px;
+}
+.client-progress {
+  padding: 0 150px;
+}

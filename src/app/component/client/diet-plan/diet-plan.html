@@ -1,0 +1,97 @@
+<div class="container my-5">
+  <div *ngIf="DietPlan() as plan; else loading">
+    <div class="mb-4">
+      <h2 class="fw-bold">{{ plan.title }}</h2>
+      <p class="text-muted">{{ plan.description }}</p>
+      <div class="text-muted">
+        <strong>Duration:</strong> {{ plan.durationInWeeks }} weeks
+      </div>
+    </div>
+
+    <div class="card shadow">
+      <div class="card-header bg-success text-white">
+        <h5 class="mb-0">Today's Meals</h5>
+      </div>
+      <div class="card-body">
+        <div
+          *ngFor="let meal of plan.mealTypes?.$values; let i = index"
+          class="mb-3 border-bottom pb-3"
+        >
+          <div class="d-flex align-items-start">
+            <input
+              type="checkbox"
+              class="form-check-input mt-1 me-3"
+              [checked]="isCompleted(meal.id)"
+              (change)="toggleMeal(meal.id)"
+              id="meal-{{ i }}"
+            />
+            <div>
+              <label
+                [for]="'meal-' + i"
+                class="form-label fw-semibold mb-1"
+                [class.text-decoration-line-through]="isCompleted(meal.id)"
+              >
+                {{ meal.mealType }} - {{ meal.mealName }}
+              </label>
+              <div class="text-muted small">
+                Calories: {{ meal.calories }} kcal • Protein: {{
+                meal.proteinGrams }}g • Carbs: {{ meal.carbsGrams }}g • Fats: {{
+                meal.fatGrams }}g
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Existing Meals Display -->
+        <!-- ... (previous content remains unchanged) -->
+
+        <!-- Add New Meal Form -->
+        <!-- <div class="card mt-4 shadow-sm">
+          <div class="card-header bg-light">
+            <strong>Add a Meal</strong>
+          </div>
+          <div class="card-body">
+            <div class="row g-3">
+              <div class="col-md-4">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Meal Type (e.g., Breakfast)"
+                />
+              </div>
+              <div class="col-md-4">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Meal Name"
+                />
+              </div>
+              <div class="col-md-4">
+                <input
+                  type="number"
+                  class="form-control"
+                  placeholder="Approx Calories"
+                />
+              </div>
+            </div>
+            <button class="btn btn-outline-primary mt-3" (click)="addNewMeal()">
+              Add Meal
+            </button>
+          </div>
+        </div> -->
+
+        <button
+          class="btn btn-success w-100 mt-3"
+          [disabled]="completedMeals().size === 0"
+          (click)="submitDiet()"
+        >
+          Submit Diet
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #loading>
+    <div class="alert alert-info">Loading your diet plan...</div>
+  </ng-template>
+</div>

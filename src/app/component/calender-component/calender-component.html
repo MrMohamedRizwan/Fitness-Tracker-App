@@ -1,0 +1,81 @@
+<div class="calendar-container">
+  <!-- Header with week navigation -->
+  <div class="header d-flex justify-content-between align-items-center my-3">
+    <button class="btn btn-outline-primary btn-sm" (click)="goToPreviousWeek()">
+      &#8592; Prev
+    </button>
+    <h4 class="mb-0">
+      {{ currentWeekDates[0] | date: 'MMM d' }} - {{ currentWeekDates[6] | date:
+      'MMM d, yyyy' }}
+    </h4>
+    <button class="btn btn-outline-primary btn-sm" (click)="goToNextWeek()">
+      Next &#8594;
+    </button>
+  </div>
+
+  <!-- Days of the current week -->
+  <div class="row text-center font-weight-bold mb-2">
+    <div class="col" *ngFor="let day of daysOfWeek">{{ day }}</div>
+  </div>
+
+  <div class="row text-center">
+    <div
+      class="col border m-1 p-2 rounded"
+      *ngFor="let date of currentWeekDates"
+      (click)="onDateClick(date)"
+      style="cursor: pointer"
+      [ngClass]="{
+        'bg-success text-white': hasWorkoutEntry(date),
+        'bg-light': !hasWorkoutEntry(date)
+      }"
+    >
+      <div class="day-number">
+        {{ date.getDate() }}
+        <i
+          *ngIf="hasWorkoutEntry(date)"
+          class="bi bi-lightning-charge-fill ms-1"
+          style="color: orange"
+        ></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Workout Log Modal -->
+  <div
+    class="modal fade"
+    id="workoutLogModal"
+    tabindex="-1"
+    aria-labelledby="workoutLogModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="workoutLogModalLabel">
+            Workout Logs - {{ selectedDate | date: 'mediumDate' }}
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <div *ngIf="selectedWorkoutLogs.length === 0">
+            No workout logs available for this date.
+          </div>
+          <div
+            *ngFor="let log of selectedWorkoutLogs"
+            class="border-bottom py-2"
+          >
+            <p><strong>Workout ID:</strong> {{ log.id }}</p>
+            <p><strong>Client ID:</strong> {{ log.clientId }}</p>
+            <p><strong>Assigned Plan:</strong> {{ log.planAssignmentId }}</p>
+            <p><strong>Date:</strong> {{ log.date | date: 'medium' }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

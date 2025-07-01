@@ -1,0 +1,7 @@
+/* In your global styles or component CSS */
+.text-decoration-line-through {
+  text-decoration: line-through;
+}
+.cc {
+  padding: 0 10%;
+}

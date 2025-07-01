@@ -1,0 +1,99 @@
+<div class="container mt-5">
+  <div class="card shadow p-4">
+    <h4 class="text-center mb-4">Complete Your Profile</h4>
+
+    <!-- 🔔 Success/Error Messages -->
+    <div *ngIf="successMessage" class="alert alert-success" role="alert">
+      <i class="bi bi-check-circle me-2"></i> {{ successMessage }}
+    </div>
+    <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
+      <i class="bi bi-exclamation-triangle me-2"></i> {{ errorMessage }}
+    </div>
+
+    <form [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+      <!-- Personal Info -->
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label class="form-label">Gender</label>
+          <select class="form-select" formControlName="gender">
+            <option value="">Select</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Goal</label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="goal"
+            placeholder="e.g., Build muscle"
+          />
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label class="form-label">Height (cm)</label>
+          <input type="number" class="form-control" formControlName="height" />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Weight (kg)</label>
+          <input type="number" class="form-control" formControlName="weight" />
+        </div>
+      </div>
+
+      <!-- Coach Selection -->
+      <div class="mb-3">
+        <label class="form-label">Search Coach</label>
+        <input
+          type="text"
+          class="form-control"
+          formControlName="coachSearch"
+          placeholder="Search by coach name"
+        />
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4">
+        <div
+          class="col"
+          *ngFor="let coach of filteredCoaches"
+          (click)="selectCoach(coach)"
+        >
+          <div
+            class="card h-100 shadow-sm coach-card"
+            [ngClass]="{ 'border-primary border-2': updateForm.value.coachId === coach.id }"
+            style="cursor: pointer"
+          >
+            <div class="card-body">
+              <h5 class="card-title mb-1">{{ coach.name }}</h5>
+              <p class="card-text mb-1">
+                <strong>Experience:</strong> {{ coach.yearsOfExperience }} years
+              </p>
+              <p class="card-text small text-muted">
+                <strong>Email:</strong> {{ coach.email }}
+              </p>
+              <div
+                *ngIf="updateForm.value.coachId === coach.id"
+                class="badge bg-primary mt-2"
+              >
+                Selected
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hidden CoachId -->
+      <input type="hidden" formControlName="coachId" />
+
+      <button
+        class="btn btn-success w-100 mt-2"
+        type="submit"
+        [disabled]="updateForm.invalid"
+      >
+        Submit Profile
+      </button>
+    </form>
+  </div>
+</div>

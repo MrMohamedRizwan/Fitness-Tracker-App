@@ -1,0 +1,61 @@
+<div class="container my-5">
+  <div *ngIf="Workouts() as plan; else loading">
+    <div class="mb-4">
+      <h2 class="fw-bold">{{ plan.title }}</h2>
+      <p class="text-muted">{{ plan.description }}</p>
+      <div class="text-muted">
+        <strong>Duration:</strong> {{ plan.durationInWeeks }} weeks
+      </div>
+    </div>
+
+    <div class="card shadow">
+      <div class="card-header bg-primary text-white">
+        <h5 class="mb-0">Today's Exercises</h5>
+      </div>
+      <div class="card-body">
+        <div
+          *ngFor="let ex of plan.exercises?.$values; let i = index"
+          class="mb-3 border-bottom pb-3"
+        >
+          <div class="d-flex align-items-start">
+            <input
+              type="checkbox"
+              class="form-check-input mt-1 me-3"
+              [checked]="isCompleted(ex.id)"
+              (change)="toggleExercise(ex.id)"
+              id="ex-{{ i }}"
+            />
+            <div>
+              <label
+                [for]="'ex-' + i"
+                class="form-label fw-semibold mb-1"
+                [class.text-decoration-line-through]="isCompleted(ex.id)"
+              >
+                {{ ex.name }}
+              </label>
+              <div class="text-muted small">
+                {{ ex.sets }} sets × {{ ex.reps }} reps • {{ ex.restSeconds }}s
+                rest
+              </div>
+              <div class="text-secondary fst-italic small mt-1">
+                {{ ex.notes }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="btn btn-success w-100 mt-3"
+          [disabled]="completedExercises().size === 0"
+          (click)="submitWorkout()"
+        >
+          Submit Workout
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #loading>
+    <div class="alert alert-info">Loading your workout...</div>
+  </ng-template>
+</div>

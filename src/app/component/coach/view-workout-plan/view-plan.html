@@ -1,0 +1,49 @@
+<div class="container py-4" style="max-height: calc(95vh); overflow-y: auto">
+  <h2 class="mb-4">View Plans</h2>
+
+  <input
+    type="text"
+    class="form-control mb-4"
+    placeholder="Search workout or diet plans..."
+    [(ngModel)]="searchTerm"
+  />
+
+  <div class="row">
+    <div class="col-md-6 mb-4" *ngFor="let plan of filteredPlans()">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">{{ plan.title }}</h5>
+          <p class="card-text text-muted">{{ plan.description }}</p>
+          <p><strong>Duration:</strong> {{ plan.durationInWeeks }} weeks</p>
+
+          <div *ngIf="plan.exercises?.$values?.length > 0">
+            <h6>Exercises:</h6>
+            <ul class="list-group list-group-flush small">
+              <li
+                class="list-group-item"
+                *ngFor="let ex of plan.exercises.$values.slice(0, 3)"
+              >
+                {{ ex.name }} - {{ ex.sets }}x{{ ex.reps }} ({{ ex.restSeconds
+                }}s rest) {{ex.caloriesBurnt }} Calories
+              </li>
+              <li
+                class="list-group-item text-muted"
+                *ngIf="plan.exercises.$values.length > 3"
+              >
+                +{{ plan.exercises.$values.length - 3 }} more exercises
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-footer bg-transparent border-top-0">
+          <button
+            class="btn btn-outline-primary w-100 btn-sm"
+            (click)="showDetails(plan); $event.stopPropagation()"
+          >
+            View Full Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

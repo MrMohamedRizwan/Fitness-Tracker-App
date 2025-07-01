@@ -1,0 +1,63 @@
+<div class="container py-4" style="max-height: calc(95vh); overflow-y: auto">
+  <h2 class="mb-4">View Diet Plans</h2>
+
+  <input
+    type="text"
+    class="form-control mb-4"
+    placeholder="Search diet plans..."
+    [(ngModel)]="searchTerm"
+  />
+
+  <div class="row">
+    <div class="col-md-6 mb-4" *ngFor="let plan of filteredPlans()">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">{{ plan.title }}</h5>
+          <p class="card-text text-muted">{{ plan.description }}</p>
+          <p><strong>Duration:</strong> {{ plan.durationInWeeks }} weeks</p>
+
+          <div *ngIf="plan.mealTypes?.$values?.length > 0">
+            <h6>Meals:</h6>
+            <ul class="list-group list-group-flush small">
+              <li
+                class="list-group-item d-flex flex-column align-items-start"
+                *ngFor="let meal of plan.mealTypes.$values.slice(0, 3)"
+              >
+                <div class="fw-semibold">
+                  {{ meal.mealName }}
+                  <span class="badge bg-primary ms-2">{{ meal.mealType }}</span>
+                </div>
+                <div class="small text-muted mt-1">
+                  <span class="me-3"
+                    ><strong>Protein:</strong> {{ meal.proteinGrams }}g</span
+                  >
+                  <span class="me-3"
+                    ><strong>Carbs:</strong> {{ meal.carbsGrams }}g</span
+                  >
+                  <span class="me-3"
+                    ><strong>Fats:</strong> {{ meal.fatGrams }}g</span
+                  >
+                  <span><strong>Calories:</strong> {{ meal.calories }}</span>
+                </div>
+              </li>
+              <li
+                class="list-group-item text-muted"
+                *ngIf="plan.mealTypes.$values.length > 3"
+              >
+                +{{ plan.mealTypes.$values.length - 3 }} more meals
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="card-footer bg-transparent border-top-0">
+          <button
+            class="btn btn-outline-success w-100 btn-sm"
+            (click)="showDetails(plan); $event.stopPropagation()"
+          >
+            View Full Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

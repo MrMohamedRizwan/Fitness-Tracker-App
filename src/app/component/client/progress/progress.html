@@ -1,0 +1,122 @@
+<div class="container py-5">
+  <!-- Header -->
+  <div class="text-center mb-5">
+    <h2 class="fw-bold">Track Your Progress</h2>
+    <p class="text-muted">
+      Upload your photo and body stats to track progress.
+    </p>
+  </div>
+
+  <!-- Chart Section -->
+  <div class="card shadow-sm mb-5">
+    <div class="card-header bg-white">
+      <h5 class="mb-0">Progress Overview</h5>
+    </div>
+    <div class="card-body">
+      <canvas
+        baseChart
+        [datasets]="lineChartData"
+        [labels]="lineChartLabels"
+        [options]="lineChartOptions"
+        [legend]="lineChartLegend"
+        [type]="lineChartType"
+      ></canvas>
+    </div>
+  </div>
+
+  <!-- Progress Cards -->
+  <div class="mb-5">
+    <h4 class="mb-4">Recent Progress</h4>
+    <div class="row g-4">
+      <div *ngFor="let progress of progressList" class="col-md-4">
+        <div class="card h-100 shadow-sm border">
+          <img
+            [src]="'http://localhost:5002/' + progress.imagePath"
+            class="card-img-top"
+            alt="Progress Image"
+          />
+          <div class="card-body">
+            <p><strong>Height:</strong> {{ progress.height }} cm</p>
+            <p><strong>Weight:</strong> {{ progress.weight }} kg</p>
+            <p class="text-muted mb-0">
+              <small
+                >Uploaded: {{ progress.uploadedAt | date: 'mediumDate' }}</small
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Upload Form -->
+  <div class="card shadow-sm">
+    <div class="card-header bg-white">
+      <h5 class="mb-0">Upload New Progress</h5>
+    </div>
+    <div class="card-body">
+      <!-- File Upload -->
+      <div class="mb-4">
+        <label class="form-label fw-semibold">Progress Photo</label>
+        <div
+          class="border border-2 border-secondary rounded p-4 text-center position-relative"
+          style="cursor: pointer"
+        >
+          <input
+            type="file"
+            accept="image/*"
+            class="position-absolute top-0 start-0 w-100 h-100 opacity-0"
+            (change)="onFileSelected($event)"
+          />
+          <div *ngIf="selectedFile; else noFile">
+            <img
+              [src]="selectedFilePreview"
+              class="img-fluid rounded mb-2"
+              style="max-height: 200px"
+              *ngIf="selectedFilePreview"
+            />
+            <p class="fw-medium mb-0">{{ selectedFile.name }}</p>
+            <small class="text-muted">Click to change image</small>
+          </div>
+          <ng-template #noFile>
+            <p class="text-muted">Click to upload or drag and drop</p>
+            <small class="text-secondary">PNG, JPG, up to 10MB</small>
+          </ng-template>
+        </div>
+      </div>
+
+      <!-- Inputs -->
+      <div class="row g-3 mb-4">
+        <div class="col-md-6">
+          <label class="form-label">Height (cm)</label>
+          <input
+            type="number"
+            class="form-control"
+            [(ngModel)]="height"
+            placeholder="e.g. 170"
+          />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Weight (kg)</label>
+          <input
+            type="number"
+            class="form-control"
+            [(ngModel)]="weight"
+            placeholder="e.g. 65"
+          />
+        </div>
+      </div>
+
+      <!-- Submit -->
+      <div>
+        <button
+          class="btn btn-primary w-100"
+          (click)="onSubmit()"
+          [disabled]="submitting()"
+        >
+          {{ submitting() ? 'Submitting...' : 'Submit Progress' }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

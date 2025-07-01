@@ -1,0 +1,39 @@
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.card.border-primary,
+.card.border-info,
+.card.border-success {
+  background-color: #f8f9fa;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Blue shade on hover */
+.card:hover {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Blue shade for selected state */
+.card.selected {
+  border-color: #0056b3;
+  box-shadow: 0 0 12px rgba(0, 86, 179, 0.3);
+}
+
+.expand-btn {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.expand-btn:hover {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+  color: #007bff;
+  background-color: #e6f0ff;
+}
+
+.card:hover .expand-btn {
+  display: block; /* or remove this if you're using only opacity */
+  opacity: 1;
+}

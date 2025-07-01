@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files
+/* @import url('bootstrap/dist/css/bootstrap.css'); */
+/* @font-face {
+  font-family: "CustomFont";
+  src: url("assets/fonts/CustomFont.woff2") format("woff2");
+} */
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

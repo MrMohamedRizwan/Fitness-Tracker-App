@@ -5,14 +5,22 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChartEvent, ChartOptions, ChartType, LabelItem } from 'chart.js';
 import { NgModule } from '@angular/core';
 import { NgChartsModule } from 'ng2-charts';
+import { CalenderComponent } from '../../calender-component/calender-component';
 
 @Component({
   selector: 'app-progress',
-  imports: [CommonModule, ReactiveFormsModule, FormsModule, NgChartsModule],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
+    NgChartsModule,
+    CalenderComponent,
+  ],
   templateUrl: './progress.html',
   styleUrl: './progress.css',
 })
 export class Progress implements OnInit {
+  clientId = 'my';
   progressList: any[] = [];
   selectedFile: File | null = null;
   selectedFilePreview: string | null = null;

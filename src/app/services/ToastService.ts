@@ -4,7 +4,7 @@ import { BehaviorSubject, timer } from 'rxjs';
 interface ToastData {
   title: string;
   message: string;
-  type:string;
+  type: string;
   visible: boolean;
 }
 
@@ -14,7 +14,7 @@ export class ToastService {
     title: '',
     message: '',
     type: '',
-    visible: false
+    visible: false,
   });
 
   toast$ = this.toastSubject.asObservable();

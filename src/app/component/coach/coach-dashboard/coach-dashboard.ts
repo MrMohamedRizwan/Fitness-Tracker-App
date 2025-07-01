@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, signal } from '@angular/core';
-import { ChartConfiguration, ChartOptions } from 'chart.js';
+import { ChartConfiguration, ChartOptions, ChartType } from 'chart.js';
 import { NgChartsModule } from 'ng2-charts';
 import { CoachService } from '../../../services/CoachService';
 
@@ -12,11 +12,14 @@ import { CoachService } from '../../../services/CoachService';
   styleUrls: ['./coach-dashboard.css'],
 })
 export class CoachDashboard implements OnInit {
-  totalClients = signal<number | null>(null);
-  activeWorkoutPlans = signal<number | null>(null);
-  activeDietPlans = signal<number | null>(null);
-  completedPlans = signal<number | null>(null);
+  // Signals
+  totalClients = signal<number>(0);
+  activeWorkoutPlans = signal<number>(0);
+  activeDietPlans = signal<number>(0);
+  completedPlans = signal<number>(0);
+  clientPro = signal<any[]>([]); // clients with status
 
+  // Bar chart for plan assignment trends
   barChartData: ChartConfiguration<'bar'>['data'] = {
     labels: [],
     datasets: [],
@@ -27,20 +30,31 @@ export class CoachDashboard implements OnInit {
     scales: {
       y: {
         beginAtZero: true,
-        title: {
-          display: true,
-          text: 'Number of Plans',
-        },
+        title: { display: true, text: 'Number of Plans' },
       },
       x: {
-        title: {
-          display: true,
-          text: 'Days',
-        },
+        title: { display: true, text: 'Days' },
       },
+    },
+    plugins: {
+      legend: { position: 'top' },
+      title: { display: true, text: 'Weekly Plan Assignments' },
     },
   };
 
+  // Optional pie chart (client status)
+  pieChartLabels: string[] = [];
+  pieChartData: number[] = [];
+  pieChartOptions: ChartOptions<'pie'> = {
+    responsive: true,
+    plugins: {
+      legend: { position: 'bottom' },
+      title: { display: true, text: 'Client Status Distribution' },
+    },
+  };
+  pieChartType: ChartType = 'pie';
+
+  // Static dummy activity & progress
   recentActivities = [
     'Assigned "Strength Plan" to John Doe',
     'Sarah completed Week 2 of "HIIT Program"',
@@ -58,26 +72,49 @@ export class CoachDashboard implements OnInit {
   constructor(private coachService: CoachService) {}
 
   ngOnInit(): void {
-    // Fetch basic counts
+    this.fetchClientData();
+    this.fetchWorkoutAndDietPlans();
+    this.fetchAssignedPlansChart();
+  }
+
+  fetchClientData(): void {
     this.coachService.getClientsList().subscribe({
       next: (res) => {
-        this.totalClients.set(res.items?.$values?.length ?? 0);
+        const clients = res.items?.$values ?? [];
+        this.totalClients.set(clients.length);
+        this.clientPro.set(clients);
+
+        // Process client status chart (optional)
+        const statusCounts = clients.reduce((acc: any, c: any) => {
+          acc[c.status] = (acc[c.status] || 0) + 1;
+          return acc;
+        }, {});
+        this.pieChartLabels = Object.keys(statusCounts);
+        this.pieChartData = Object.values(statusCounts);
+      },
+      error: (err) => {
+        console.error('Failed to fetch clients:', err);
       },
     });
+  }
 
+  fetchWorkoutAndDietPlans(): void {
     this.coachService.getWorkouts().subscribe({
       next: (res) => {
         this.activeWorkoutPlans.set(res.items?.$values?.length ?? 0);
       },
+      error: (err) => console.error('Workout plans fetch error:', err),
     });
 
     this.coachService.getDiets().subscribe({
       next: (res) => {
         this.activeDietPlans.set(res.items?.$values?.length ?? 0);
       },
+      error: (err) => console.error('Diet plans fetch error:', err),
     });
+  }
 
-    // Fetch chart data
+  fetchAssignedPlansChart(): void {
     this.coachService.getAssignedPlansChart().subscribe({
       next: (res) => {
         const labels = res.labels?.$values ?? [];
@@ -91,12 +128,7 @@ export class CoachDashboard implements OnInit {
             borderRadius: 6,
           })) ?? [];
 
-        this.barChartData = {
-          labels,
-          datasets,
-        };
-
-        console.log('Parsed Chart Data:', this.barChartData);
+        this.barChartData = { labels, datasets };
       },
       error: (err) => {
         console.error('Error fetching assigned plans chart:', err);

@@ -12,6 +12,8 @@ import { provideHttpClient } from '@angular/common/http';
 import { ToastService } from './services/ToastService';
 import { CoachService } from './services/CoachService';
 import { WorkoutLogService } from './services/WorkoutLogService';
+import { provideAnimations } from '@angular/platform-browser/animations';
+import { provideToastr } from 'ngx-toastr';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -23,5 +25,7 @@ export const appConfig: ApplicationConfig = {
     ToastService,
     CoachService,
     WorkoutLogService,
+    provideAnimations(),
+    provideToastr(), // ✅ add toastr this way
   ],
 };

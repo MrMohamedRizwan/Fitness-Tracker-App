@@ -46,6 +46,14 @@ export class DietPlanService {
       },
     });
   }
+  public deleteDietPlan(id: string): Observable<any> {
+    const token = this.getToken();
+    return this.http.get(`${this.baseUrl}dietplan/${id}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    });
+  }
   public SubmitDietByClient(payload: any): Observable<any> {
     const token = this.getToken();
     return this.http.post<any>(

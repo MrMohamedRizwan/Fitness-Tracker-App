@@ -24,9 +24,12 @@ import { WorkoutPlan } from './component/client/workout-plan/workout-plan';
 import { Progress } from './component/client/progress/progress';
 import { Stats } from './component/client/stats/stats';
 import { Viewprogress } from './component/coach/viewprogress/viewprogress';
+import { AdminDashboard } from './component/admin/admin-dashboard/admin-dashboard';
+import { Toasssss } from './toasssss/toasssss';
 
 export const routes: Routes = [
   { path: 'notification', component: Notification },
+  { path: 'ts', component: Toasssss },
 
   { path: '', component: LoginComponet },
   { path: 'signup', component: SignupComponent },
@@ -75,6 +78,12 @@ export const routes: Routes = [
       { path: 'progress', component: Progress },
       { path: 'stats-analytics', component: Stats },
     ],
+  },
+  {
+    path: 'admin-dashboard',
+    component: AdminDashboard,
+    canActivate: [AuthGuard],
+    data: { roles: ['Admin'] },
   },
   { path: 'unauthorized', component: Unauthorized },
 ];

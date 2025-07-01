@@ -77,16 +77,16 @@ export class SignupComponent implements OnInit {
     // console.log('User submitted:', user);
     this.userService.addUser(user).subscribe({
       next: (response) => {
-        this.toastService.showToast(
-          'Login Successful',
-          'You have been logged in.',
-          'success'
-        );
+        // this.toastService.showToast(
+        //   'Login Successful',
+        //   'You have been logged in.',
+        //   'success'
+        // );
         // this.router.navigate(['/'])
       },
       error: (error) => {
         console.error('Error adding user:', error);
-        this.toastService.showToast('SignUp Failed', error, 'error');
+        // this.toastService.showToast('SignUp Failed', error, 'error');
       },
     });
     // }

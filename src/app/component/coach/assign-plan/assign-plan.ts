@@ -8,6 +8,7 @@ import {
 } from '@angular/forms';
 import { CoachService } from '../../../services/CoachService';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastService } from '../../../services/ToastService';
 
 @Component({
   selector: 'app-assign-plan',
@@ -42,7 +43,8 @@ export class AssignPlan implements OnInit {
     private coachService: CoachService,
     private cdr: ChangeDetectorRef,
     private route: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private toastService: ToastService
   ) {
     this.form = this.fb.group({});
   }
@@ -145,7 +147,7 @@ export class AssignPlan implements OnInit {
       return;
     }
 
-    this.isSubmitting = true;
+    this.isSubmitting = false;
 
     const selectedClient = this.clients.find(
       (c) => c.id === this.selectedClient
@@ -174,13 +176,18 @@ export class AssignPlan implements OnInit {
 
     this.coachService.assignPlanToClient(Workoutpayload).subscribe({
       next: () => {
-        alert('Plans successfully assigned!');
         this.selectedClient = '';
         this.selectedWorkoutPlan = '';
         this.selectedDietPlan = '';
+        this.selectedClientDetails = '';
+
+        this.toastService.showToast('Successful', 'Plan Assigned', 'success');
+        this.isSubmitting = false;
+        alert('Plans successfully assigned!');
       },
       error: (err) => {
         console.error('Failed to assign plan:', err);
+        this.toastService.showToast('Failed', err, 'error');
         alert('Failed to assign Workout plan. Please try again.');
       },
       complete: () => {
@@ -189,13 +196,17 @@ export class AssignPlan implements OnInit {
     });
     this.coachService.assignPlanToClient(DietPayload).subscribe({
       next: () => {
-        alert('Plans successfully assigned!');
+        this.toastService.showToast('Successful', 'Plan Assigned', 'success');
         this.selectedClient = '';
         this.selectedWorkoutPlan = '';
         this.selectedDietPlan = '';
+        this.selectedClientDetails = '';
+        this.isSubmitting = false;
+        alert('Plans successfully assigned!');
       },
       error: (err) => {
         console.error('Failed to assign plan:', err);
+        this.toastService.showToast('Failed', err, 'error');
         alert('Failed to assign Diet plan. Please try again.');
       },
       complete: () => {

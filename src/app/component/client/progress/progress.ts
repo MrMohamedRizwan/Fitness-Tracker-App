@@ -6,6 +6,7 @@ import { ChartEvent, ChartOptions, ChartType, LabelItem } from 'chart.js';
 import { NgModule } from '@angular/core';
 import { NgChartsModule } from 'ng2-charts';
 import { CalenderComponent } from '../../calender-component/calender-component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-progress',
@@ -42,7 +43,10 @@ export class Progress implements OnInit {
   lineChartType: ChartType = 'line';
   lineChartLegend = true;
 
-  constructor(private progressService: ProgressService) {}
+  constructor(
+    private progressService: ProgressService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.loadProgressData();
@@ -111,6 +115,7 @@ export class Progress implements OnInit {
         this.selectedFilePreview = null;
         this.loadProgressData();
         this.loading = false;
+        this.router.navigate(['stats-analytics']);
       },
       error: () => {
         this.loading = false;

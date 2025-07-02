@@ -1,5 +1,5 @@
-<div *ngIf="workout() as w" class="container mt-4">
-  <!-- Header with Edit/Delete -->
+<div *ngIf="workoutData() as w" class="container mt-4">
+  <!-- Header -->
   <div class="d-flex justify-content-between align-items-center mb-3">
     <div>
       <h3 class="text-primary mb-0">{{ w.title }}</h3>
@@ -15,7 +15,7 @@
       </button>
       <button
         class="btn btn-secondary btn-sm me-2"
-        (click)="isEditing = false"
+        (click)="cancelEdit()"
         *ngIf="isEditing"
       >
         Cancel
@@ -26,7 +26,7 @@
     </div>
   </div>
 
-  <!-- ✏️ Edit Mode -->
+  <!-- Edit Mode -->
   <form
     *ngIf="isEditing"
     #editForm="ngForm"
@@ -62,69 +62,99 @@
       class="border rounded p-3 mb-3"
     >
       <h6>Exercise {{ i + 1 }}</h6>
-      <div class="mb-2">
-        <label>Exercise Name</label>
-        <input class="form-control" [(ngModel)]="ex.name" name="name{{i}}" />
-      </div>
-      <div class="row">
-        <div class="col">
+
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <label>Exercise Name</label>
+          <input
+            class="form-control"
+            [(ngModel)]="ex.name"
+            name="name{{ i }}"
+          />
+        </div>
+        <div class="col-md-3">
           <label>Sets</label>
           <input
             class="form-control"
             type="number"
             [(ngModel)]="ex.sets"
-            name="sets{{i}}"
+            name="sets{{ i }}"
           />
         </div>
-        <div class="col">
+        <div class="col-md-3">
           <label>Reps</label>
           <input
             class="form-control"
             type="number"
             [(ngModel)]="ex.reps"
-            name="reps{{i}}"
+            name="reps{{ i }}"
           />
         </div>
-        <div class="col">
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-md-4">
           <label>Rest Seconds</label>
           <input
             class="form-control"
             type="number"
             [(ngModel)]="ex.restSeconds"
-            name="restSeconds{{i}}"
+            name="restSeconds{{ i }}"
           />
         </div>
-        <div class="col">
+        <div class="col-md-4">
           <label>Calories Burnt</label>
           <input
             class="form-control"
             type="number"
             [(ngModel)]="ex.caloriesBurnt"
-            name="caloriesBurnt{{i}}"
+            name="caloriesBurnt{{ i }}"
+          />
+        </div>
+        <div class="col-md-4">
+          <label>Notes</label>
+          <input
+            class="form-control"
+            [(ngModel)]="ex.notes"
+            name="notes{{ i }}"
           />
         </div>
       </div>
-      <label class="mt-2">Notes</label>
-      <textarea
-        class="form-control"
-        [(ngModel)]="ex.notes"
-        name="notes{{i}}"
-      ></textarea>
+
+      <div class="text-end">
+        <button
+          class="btn btn-outline-danger btn-sm"
+          type="button"
+          (click)="removeExercise(i)"
+          *ngIf="w.exercises?.$values.length > 1"
+        >
+          Remove
+        </button>
+      </div>
     </div>
 
     <button
-      class="btn btn-success mt-3"
-      type="submit"
-      [disabled]="editForm.invalid"
+      class="btn btn-outline-primary btn-sm mb-3"
+      type="button"
+      (click)="addExercise()"
     >
-      Save Changes
+      <i class="bi bi-plus-circle"></i> Add Exercise
     </button>
+
+    <div class="d-flex gap-2 justify-content-end">
+      <button
+        class="btn btn-success"
+        type="submit"
+        [disabled]="editForm.invalid"
+      >
+        Save Changes
+      </button>
+    </div>
   </form>
 
-  <!-- 👁️ View Mode -->
+  <!-- View Mode -->
   <div *ngIf="!isEditing">
     <p><strong>Duration:</strong> {{ w.durationInWeeks }} weeks</p>
-    <!-- <p><strong>Coach ID:</strong> {{ w.coachId }}</p> -->
 
     <h5 class="mt-4">Exercises</h5>
     <ul class="list-group">
@@ -141,57 +171,56 @@
               >{{ ex.restSeconds }}s rest</span
             >
             <span class="badge bg-danger">
-              <i class="bi bi-fire"></i> {{ ex.caloriesBurnt }} Calories Burnt
+              <i class="bi bi-fire"></i> {{ ex.caloriesBurnt }} Calories
             </span>
           </div>
         </div>
       </li>
     </ul>
-  </div>
-  <div class="mb-4">
-    <label class="form-label">Assigned Users</label>
-    <ul class="list-group">
-      <!-- <pre>{{w.clients|json}}</pre> -->
-      <li
-        *ngFor="let user of w.clients?.$values"
-        class="list-group-item d-flex justify-content-between align-items-center"
-      >
-        <div>
-          <strong>{{ user.name }}</strong>
-          <span class="text-muted small ms-2">{{ user.email }}</span>
-        </div>
 
-        <div class="text-end">
+    <div class="mt-4">
+      <label class="form-label">Assigned Users</label>
+      <ul class="list-group">
+        <li
+          *ngFor="let user of w.clients?.$values"
+          class="list-group-item d-flex justify-content-between align-items-center"
+        >
           <div>
-            <span class="badge bg-light text-dark">
-              Assigned on: {{ user.assignedOn | date:'mediumDate' }}
-            </span>
+            <strong>{{ user.name }}</strong>
+            <span class="text-muted small ms-2">{{ user.email }}</span>
           </div>
-          <div>
-            <span
-              class="badge"
-              [ngClass]="{
-                'bg-success': user.status === 'Completed',
-                'bg-warning': user.status === 'Not Completed',
-                'bg-danger': user.status === 'inactive'
-              }"
-            >
-              {{ user.status }}
-            </span>
+          <div class="text-end">
+            <div>
+              <span class="badge bg-light text-dark">
+                Assigned on: {{ user.assignedOn | date: 'mediumDate' }}
+              </span>
+            </div>
+            <div>
+              <span
+                class="badge"
+                [ngClass]="{
+                  'bg-success': user.status === 'Completed',
+                  'bg-warning': user.status === 'Not Completed',
+                  'bg-danger': user.status === 'inactive'
+                }"
+              >
+                {{ user.status }}
+              </span>
+            </div>
           </div>
-        </div>
-      </li>
-      <li
-        *ngIf="!w.clients?.$values?.length"
-        class="list-group-item text-muted"
-      >
-        No users assigned.
-      </li>
-    </ul>
+        </li>
+        <li
+          *ngIf="!w.clients?.$values?.length"
+          class="list-group-item text-muted"
+        >
+          No users assigned.
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 
-<!-- 🕓 Loading State -->
-<div *ngIf="!workout()" class="text-center text-muted mt-5">
+<!-- Loading State -->
+<div *ngIf="!workoutData()" class="text-center text-muted mt-5">
   <p>Loading workout plan...</p>
 </div>

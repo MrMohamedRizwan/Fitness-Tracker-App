@@ -40,17 +40,18 @@ export class CreatePlan {
           sets: ['3'],
           reps: ['15'],
           restSeconds: ['60'],
+          caloriesBurnt: ['10'],
           notes: ['Keep your back straight and go all the way down.'],
         }),
       ]),
       meals: this.fb.array([
         this.fb.group({
-          name: ['Enter Meal Name', Validators.required],
+          mealName: ['Enter Meal Name', Validators.required],
           mealType: [''],
           calories: [''],
-          protein: [''],
-          carbs: [''],
-          fats: [''],
+          proteinGrams: [''],
+          carbsGrams: [''],
+          fatGrams: [''],
         }),
       ]),
     });
@@ -74,6 +75,7 @@ export class CreatePlan {
         sets: [''],
         reps: [''],
         restSeconds: [''],
+        caloriesBurnt: [''],
         notes: [''],
       })
     );
@@ -86,12 +88,12 @@ export class CreatePlan {
   addMeal() {
     this.meals.push(
       this.fb.group({
-        name: ['', Validators.required],
+        mealName: ['', Validators.required],
         mealType: [''],
         calories: [''],
-        protein: [''],
-        carbs: [''],
-        fats: [''],
+        proteinGrams: [''],
+        carbsGrams: [''],
+        fatGrams: [''],
       })
     );
   }

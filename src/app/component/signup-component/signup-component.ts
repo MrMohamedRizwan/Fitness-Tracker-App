@@ -54,7 +54,7 @@ export class SignupComponent implements OnInit {
         role: new FormControl('', [Validators.required]),
         yearsOfExperience: new FormControl('32', [
           Validators.required,
-          Validators.min(18),
+          Validators.min(1),
         ]),
       },
       { validators: passwordsMatchValidator }

@@ -1,68 +1,116 @@
-import { Component, signal } from '@angular/core';
+import { Component, OnInit, signal } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ClientService } from '../../../services/ClientService';
 import { WorkoutPlanService } from '../../../services/WorkoutPlanService';
 import { CommonModule } from '@angular/common';
-import { WorkoutPlan } from '../../../models/WorkoutPlan';
-import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-workout-details',
-  imports: [CommonModule, ReactiveFormsModule, FormsModule],
+  standalone: true,
+  imports: [CommonModule, FormsModule],
   templateUrl: './workout-details.html',
   styleUrl: './workout-details.css',
 })
-export class WorkoutDetails {
-  workoutName!: string;
-  workoutForm!: FormGroup;
+export class WorkoutDetails implements OnInit {
+  workoutId!: string;
   workout = signal<any | null>(null);
+  isEditing = false;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private workoutService: WorkoutPlanService
   ) {}
-  isEditing = false;
 
-  //@Input() workoutId!: string;
-  //@Input() coachId?: string;
   ngOnInit(): void {
-    // this.workoutName = this.route.snapshot.params['workoutId'];
-    // this.workoutService
-    //   .GetParticularWorkout(this.workoutName)
-    //   .subscribe((res) => {
-    //     this.workout = res;
-    //     console.log(this.workout);
-    //   });
-    this.route.params.subscribe((params) => {
-      this.workoutName = params['workoutId'];
-      this.workoutService
-        .GetParticularWorkout(this.workoutName)
-        .subscribe((res) => {
-          this.workout.set(res);
-          console.log(this.workout());
-        });
+    this.workoutId = this.route.snapshot.params['workoutId'];
+    this.loadWorkout();
+  }
+
+  loadWorkout(): void {
+    this.workoutService.GetParticularWorkout(this.workoutId).subscribe({
+      next: (res) => {
+        this.workout.set(res);
+        console.log('✅ Loaded workout:', res);
+      },
+      error: (err) => {
+        console.error('❌ Failed to load workout:', err);
+        alert('Error loading workout plan.');
+      },
     });
   }
 
+  workoutData() {
+    return this.workout();
+  }
+
   editWorkout(formData: any): void {
+    const updated = this.workout();
+    if (!updated) return;
+
     const updatedWorkout = {
-      ...this.workout(),
+      ...updated,
       title: formData.title,
       description: formData.description,
       durationInWeeks: formData.durationInWeeks,
-      exercises: this.workout()?.exercises, // already updated via two-way binding
+      exercises: updated.exercises?.$values || [],
     };
 
-    // this.router.navigate(['/edit-workout', this.workoutName]);
-    console.log('Edit Workout');
+    this.workoutService
+      .updateWorkoutPlan(this.workoutId, updatedWorkout)
+      .subscribe({
+        next: () => {
+          alert('✅ Workout plan updated!');
+          this.isEditing = false;
+          this.loadWorkout(); // reload updated data
+        },
+        error: (err) => {
+          console.error('❌ Update failed:', err);
+          alert('Failed to update workout plan.');
+        },
+      });
+  }
+
+  cancelEdit(): void {
+    this.isEditing = false;
+    this.loadWorkout();
+  }
+
+  addExercise(): void {
+    const current = this.workout();
+    if (!current || !current.exercises?.$values) return;
+
+    current.exercises.$values.push({
+      name: '',
+      sets: 0,
+      reps: 0,
+      restSeconds: 0,
+      caloriesBurnt: 0,
+      notes: '',
+    });
+
+    this.workout.set({ ...current });
+  }
+
+  removeExercise(index: number): void {
+    const current = this.workout();
+    if (!current || !current.exercises?.$values) return;
+
+    current.exercises.$values.splice(index, 1);
+    this.workout.set({ ...current });
   }
 
   deleteWorkout(): void {
     if (confirm('Are you sure you want to delete this workout plan?')) {
-      this.workoutService.deleteWorkoutPlan(this.workoutName).subscribe(() => {
-        alert('Workout plan deleted successfully!');
-        // this.router.navigate(['/workouts']);
+      this.workoutService.deleteWorkoutPlan(this.workoutId).subscribe({
+        next: () => {
+          alert('🗑️ Workout plan deleted!');
+          this.router.navigate(['/view-workout-plan']); // adjust route
+        },
+        error: (err) => {
+          console.error('❌ Deletion failed:', err);
+          alert('Failed to delete workout.');
+        },
       });
     }
   }

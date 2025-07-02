@@ -1,6 +1,6 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { DietPlanService } from '../../../services/DietPlanService';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { WorkoutPlanService } from '../../../services/WorkoutPlanService';
@@ -15,7 +15,7 @@ export class DietPlan implements OnInit {
   planAssignmentId: any;
   DietPlan = signal<any>(null);
   completedMeals = signal<Set<string>>(new Set());
-  showAddForm = signal(false);
+  showAddForm = false;
   newMeal = {
     mealType: '',
     mealName: '',
@@ -24,7 +24,8 @@ export class DietPlan implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private dietPlanService: DietPlanService
+    private dietPlanService: DietPlanService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -33,26 +34,26 @@ export class DietPlan implements OnInit {
       this.route.snapshot.paramMap.get('planAssignemnetId');
     this.getDietPlanDetails(dietPlanId);
   }
-  addNewMeal(): void {
-    const plan = this.DietPlan();
-    const meal = {
-      id: crypto.randomUUID(),
-      ...this.newMeal,
-      proteinGrams: 0,
-      carbsGrams: 0,
-      fatGrams: 0,
-    };
+  // addNewMeal(): void {
+  //   const plan = this.DietPlan();
+  //   const meal = {
+  //     id: crypto.randomUUID(),
+  //     ...this.newMeal,
+  //     proteinGrams: 0,
+  //     carbsGrams: 0,
+  //     fatGrams: 0,
+  //   };
 
-    if (!plan.mealTypes?.$values) {
-      plan.mealTypes = { $values: [] };
-    }
+  //   if (!plan.mealTypes?.$values) {
+  //     plan.mealTypes = { $values: [] };
+  //   }
 
-    plan.mealTypes.$values.push(meal);
-    this.DietPlan.set({ ...plan });
+  //   plan.mealTypes.$values.push(meal);
+  //   this.DietPlan.set({ ...plan });
 
-    this.newMeal = { mealType: '', mealName: '', calories: 0 };
-    this.showAddForm.set(false);
-  }
+  //   this.newMeal = { mealType: '', mealName: '', calories: 0 };
+  //   this.showAddForm.set(false);
+  // }
 
   deleteMeal(id: string): void {
     const plan = this.DietPlan();
@@ -117,8 +118,41 @@ export class DietPlan implements OnInit {
     console.log('Diet Submission Payload:', payload);
 
     this.dietPlanService.SubmitDietByClient(payload).subscribe({
-      next: (res) => console.log('Submitted successfully', res),
+      next: (res) => {
+        console.log('Submitted successfully', res);
+        this.router.navigate(['client-dashboard']);
+      },
       error: (err) => console.error(err),
     });
+  }
+
+  addNewMeal(): void {
+    const { mealType, mealName, calories } = this.newMeal;
+
+    if (!mealType.trim() || !mealName.trim() || calories <= 0) {
+      alert('❌ Please fill all fields correctly.');
+      return;
+    }
+    const plan = this.DietPlan();
+    const mealCalories = calories && calories > 0 ? calories : 500;
+    const meal = {
+      id: crypto.randomUUID(),
+      mealType,
+      mealName,
+      calories: mealCalories,
+      proteinGrams: 10,
+      carbsGrams: 15,
+      fatGrams: 10,
+    };
+
+    if (!plan.mealTypes?.$values) {
+      plan.mealTypes = { $values: [] };
+    }
+
+    plan.mealTypes.$values.push(meal);
+    this.DietPlan.set({ ...plan });
+
+    this.newMeal = { mealType: '', mealName: '', calories: 0 };
+    this.showAddForm = false;
   }
 }

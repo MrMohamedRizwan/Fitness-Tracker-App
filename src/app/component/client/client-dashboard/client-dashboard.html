@@ -54,6 +54,32 @@
                     ></div>
                   </div>
                 </div>
+                <div class="mt-3">
+                  <button
+                    *ngIf="dietPlans()[0].status === 'Completed'"
+                    class="btn btn-outline-success btn-lg w-100 d-flex align-items-center justify-content-center"
+                  >
+                    <i class="bi bi-bar-chart-fill me-2"></i>
+                    View Progress
+                  </button>
+                  <button
+                    *ngIf="dietPlans()[0].status === 'On Progress'"
+                    class="btn btn-success btn-lg w-100 d-flex align-items-center justify-content-center"
+                    (click)="showDietDetails(dietPlans()[0]); $event.stopPropagation()"
+                  >
+                    <i class="bi bi-play-circle-fill me-2"></i>
+                    Continue Diet
+                  </button>
+                  <button
+                    *ngIf="dietPlans()[0].status === 'Not Started'"
+                    class="btn btn-primary btn-lg w-100 d-flex align-items-center justify-content-center"
+                    (click)="acceptPlan(dietPlans()[0],0); $event.stopPropagation()"
+                    (click)="dietPlans()[0].status = 'On Progress'; acceptPlan(dietPlans()[0],1); $event.stopPropagation()"
+                  >
+                    <i class="bi bi-check-circle-fill me-2"></i>
+                    Accept Diet Plan
+                  </button>
+                </div>
               </ng-container>
 
               <div *ngIf="dietPlans().length === 0" class="text-muted small">
@@ -71,7 +97,7 @@
                 class="d-flex justify-content-between align-items-center mb-3"
               >
                 <h5 class="card-title mb-0">Current Workout</h5>
-                <i class="bi bi-barbell text-primary fs-4"></i>
+                <i class="bi bi-activity text-primary fs-4"></i>
               </div>
 
               <ng-container *ngIf="workoutPlans().length > 0">
@@ -101,6 +127,32 @@
                       attr.aria-valuemax="100"
                     ></div>
                   </div>
+                </div>
+                <div class="mt-3">
+                  <button
+                    *ngIf="dietPlans()[0].status === 'Completed'"
+                    class="btn btn-outline-primary btn-lg w-100 d-flex align-items-center justify-content-center"
+                  >
+                    <i class="bi bi-bar-chart-fill me-2"></i>
+                    View Progress
+                  </button>
+                  <button
+                    *ngIf="dietPlans()[0].status === 'On Progress'"
+                    class="btn btn-primary btn-lg w-100 d-flex align-items-center justify-content-center"
+                    (click)="showWorkoutDetails(dietPlans()[0]); $event.stopPropagation()"
+                  >
+                    <i class="bi bi-play-circle-fill me-2"></i>
+                    Continue Workout
+                  </button>
+                  <button
+                    *ngIf="dietPlans()[0].status === 'Not Started'"
+                    class="btn btn-primary btn-lg w-100 d-flex align-items-center justify-content-center"
+                    (click)="acceptPlan(dietPlans()[0],1); $event.stopPropagation()"
+                    (click)="dietPlans()[0].status = 'On Progress'; acceptPlan(dietPlans()[0],1); $event.stopPropagation()"
+                  >
+                    <i class="bi bi-check-circle-fill me-2"></i>
+                    Accept Workout Plan
+                  </button>
                 </div>
               </ng-container>
 
@@ -138,11 +190,10 @@
               <div
                 class="border-top pt-2 mt-2 text-success d-flex justify-content-between small fw-semibold"
               >
-                <span>Progress</span>
-                <span
-                  >-{{ this.client().currentWeight - this.client().goalWeight }}
-                  kg</span
-                >
+                <span *ngIf="this.weightChange != null"> Progress </span>
+                <span *ngIf="this.weightChange != null">
+                  {{ this.weightChange }}
+                </span>
               </div>
             </div>
           </div>
@@ -152,38 +203,24 @@
       <!-- Recent Activity -->
       <div class="card shadow-sm">
         <div class="card-body">
-          <h5 class="card-title mb-3">Recent Activity</h5>
-          <p class="text-muted small mb-4">Your latest fitness activities</p>
+          <h5 class="card-title mb-3">Recent Notifications</h5>
 
-          <div class="d-flex align-items-center bg-light rounded p-3 mb-3">
-            <div
-              class="me-3 bg-success bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center"
-              style="width: 40px; height: 40px"
-            >
-              <i class="bi bi-dumbbell text-success fs-5"></i>
-            </div>
-            <div class="flex-grow-1">
-              <p class="mb-0 fw-medium">Completed workout session</p>
-              <small class="text-muted">Upper body strength training</small>
-            </div>
-            <small class="text-muted ms-3">2 hours ago</small>
-          </div>
-
-          <div class="d-flex align-items-center bg-light rounded p-3">
-            <div
-              class="me-3 bg-primary bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center"
-              style="width: 40px; height: 40px"
-            >
-              <i class="bi bi-bar-chart-line text-primary fs-5"></i>
-            </div>
-            <div class="flex-grow-1">
-              <p class="mb-0 fw-medium">Progress update</p>
-              <small class="text-muted">
-                Weight: {{ user.currentWeight }}kg, Body fat: 15%
-              </small>
-            </div>
-            <small class="text-muted ms-3">1 day ago</small>
-          </div>
+          <ng-container
+            *ngIf="progressList && progressList.length > 0; else noActivity"
+          >
+            <ul class="list-group list-group-flush">
+              <li
+                *ngFor="let activity of progressList"
+                class="list-group-item d-flex align-items-center"
+              >
+                <i class="bi bi-clock-history text-primary me-3 fs-5"></i>
+                <span class="fw-medium">{{ activity }}</span>
+              </li>
+            </ul>
+          </ng-container>
+          <ng-template #noActivity>
+            <div class="text-muted small">No recent activity.</div>
+          </ng-template>
         </div>
       </div>
     </div>

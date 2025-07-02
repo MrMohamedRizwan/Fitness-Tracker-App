@@ -12,6 +12,15 @@ declare var bootstrap: any;
   styleUrl: './calender-component.css',
 })
 export class CalenderComponent implements OnInit {
+  parseJSON(json: string): any[] {
+    try {
+      return JSON.parse(json);
+    } catch (error) {
+      console.error('❌ Failed to parse exerciseJSON:', error);
+      return [];
+    }
+  }
+
   @Input() clientId!: string;
 
   constructor(

@@ -102,17 +102,21 @@ export class Viewprogress implements OnInit {
       ],
     };
 
+    const filteredAssigns = assigns.filter(
+      (a) => a.caloriesIntake !== 0 && a.caloriesBurnt !== 0
+    );
+
     this.caloriesChartData = {
-      labels: assigns.map((_, i) => `Plan ${i + 1}`),
+      labels: filteredAssigns.map((_, i) => `Plan ${i + 1}`),
       datasets: [
         {
           label: 'Calories Intake',
-          data: assigns.map((a) => a.caloriesIntake),
+          data: filteredAssigns.map((a) => a.caloriesIntake),
           backgroundColor: 'orange',
         },
         {
           label: 'Calories Burnt',
-          data: assigns.map((a) => a.caloriesBurnt),
+          data: filteredAssigns.map((a) => a.caloriesBurnt),
           backgroundColor: 'red',
         },
       ],

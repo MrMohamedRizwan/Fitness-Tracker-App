@@ -90,6 +90,72 @@
       </div>
     </div>
   </div>
+  <!-- Add New Meal Button -->
+  <div class="text-end mt-4">
+    <button
+      class="btn btn-outline-secondary btn-sm"
+      (click)="showAddForm = !showAddForm"
+    >
+      {{ showAddForm ? 'Cancel' : '➕ Add Meal' }}
+    </button>
+  </div>
+
+  <!-- Add Meal Form -->
+  <div *ngIf="showAddForm" class="card mt-3 shadow-sm">
+    <div class="card-header bg-light">
+      <strong>Add a Meal</strong>
+    </div>
+    <div class="card-body">
+      <div class="row g-3">
+        <div class="col-md-4">
+          <label class="form-label fw-semibold" for="newMealType"
+            >Meal Type</label
+          >
+          <select
+            class="form-select"
+            [(ngModel)]="newMeal.mealType"
+            name="newMealType"
+            id="newMealType"
+          >
+            <option value="" disabled selected>Select Meal Type</option>
+            <option value="Breakfast">Breakfast</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+            <option value="Snack">Snack</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label class="form-label fw-semibold" for="newMealName"
+            >Meal Name</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Meal Name"
+            [(ngModel)]="newMeal.mealName"
+            name="newMealName"
+            id="newMealName"
+          />
+        </div>
+        <div class="col-md-4">
+          <label class="form-label fw-semibold" for="newMealCalories"
+            >Approx Calories</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            placeholder="Approx Calories"
+            [(ngModel)]="newMeal.calories"
+            name="newMealCalories"
+            id="newMealCalories"
+          />
+        </div>
+      </div>
+      <button class="btn btn-outline-success mt-3" (click)="addNewMeal()">
+        Add Meal
+      </button>
+    </div>
+  </div>
 
   <ng-template #loading>
     <div class="alert alert-info">Loading your diet plan...</div>

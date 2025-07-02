@@ -50,7 +50,7 @@ export class LoginComponet {
         // this.toastr.success('Operation Successful!', 'Success');
       },
       error: (errMessage: string) => {
-        // this.toastService.showToast('Login Failed', errMessage, 'error');
+        this.toastService.showToast('Login Failed', errMessage, 'error');
       },
     });
   }

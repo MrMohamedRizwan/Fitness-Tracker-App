@@ -14,7 +14,7 @@
       </button>
       <button
         class="btn btn-secondary btn-sm me-2"
-        (click)="isEditing = false"
+        (click)="cancelEdit()"
         *ngIf="isEditing"
       >
         Cancel
@@ -25,7 +25,12 @@
     </div>
   </div>
 
-  <form *ngIf="isEditing" (ngSubmit)="saveDiet()">
+  <!-- ✍️ Edit Form -->
+  <form
+    *ngIf="isEditing"
+    (ngSubmit)="saveDiet(editForm.value)"
+    #editForm="ngForm"
+  >
     <div class="mb-3">
       <label class="form-label">Title</label>
       <input class="form-control" [(ngModel)]="d.title" name="title" required />
@@ -49,18 +54,43 @@
       />
     </div>
 
+    <!-- 🔁 Editable Meals -->
     <div
       *ngFor="let meal of d.mealTypes?.$values; let i = index"
       class="border rounded p-3 mb-3"
     >
-      <h6>Meal {{ i + 1 }}: {{ meal.mealType }}</h6>
+      <div class="d-flex justify-content-between align-items-center">
+        <h6>Meal {{ i + 1 }}: {{ meal.mealType || 'New Meal' }}</h6>
+        <button
+          type="button"
+          class="btn btn-outline-danger btn-sm"
+          (click)="removeMeal(i)"
+        >
+          <i class="bi bi-trash"></i> Remove
+        </button>
+      </div>
       <input
         class="form-control mb-2"
         [(ngModel)]="meal.mealName"
         name="mealName{{i}}"
+        placeholder="Meal name"
       />
       <div class="row">
-        <div class="col">
+        <div class="col-md-3">
+          <label>Meal Type</label>
+          <select
+            class="form-select"
+            [(ngModel)]="meal.mealType"
+            name="mealType{{i}}"
+            required
+          >
+            <option value="" disabled>Select type</option>
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+          </select>
+        </div>
+        <div class="col-md-3">
           <label>Calories</label>
           <input
             class="form-control"
@@ -69,7 +99,7 @@
             name="calories{{i}}"
           />
         </div>
-        <div class="col">
+        <div class="col-md-2">
           <label>Protein (g)</label>
           <input
             class="form-control"
@@ -78,7 +108,7 @@
             name="protein{{i}}"
           />
         </div>
-        <div class="col">
+        <div class="col-md-2">
           <label>Carbs (g)</label>
           <input
             class="form-control"
@@ -87,7 +117,7 @@
             name="carbs{{i}}"
           />
         </div>
-        <div class="col">
+        <div class="col-md-2">
           <label>Fats (g)</label>
           <input
             class="form-control"
@@ -99,9 +129,21 @@
       </div>
     </div>
 
-    <button class="btn btn-success mt-3" type="submit">Save Changes</button>
+    <!-- ➕ Add Meal Button -->
+    <button
+      type="button"
+      class="btn btn-outline-primary mb-3"
+      (click)="addMeal()"
+    >
+      <i class="bi bi-plus-circle"></i> Add Meal
+    </button>
+
+    <div class="text-end">
+      <button class="btn btn-success mt-3" type="submit">Save Changes</button>
+    </div>
   </form>
 
+  <!-- 👁️ Read-Only View -->
   <div *ngIf="!isEditing">
     <p><strong>Duration:</strong> {{ d.durationInWeeks }} weeks</p>
 
@@ -126,11 +168,17 @@
           <span class="badge bg-info text-dark">{{ meal.fatGrams }}g Fat</span>
         </div>
       </li>
+      <li
+        *ngIf="!d.mealTypes?.$values?.length"
+        class="list-group-item text-muted"
+      >
+        No meals added.
+      </li>
     </ul>
-    <div class="mb-4">
+
+    <div class="mt-4">
       <label class="form-label">Assigned Users</label>
       <ul class="list-group">
-        <!-- <pre>{{w.clients|json}}</pre> -->
         <li
           *ngFor="let user of d.clients?.$values"
           class="list-group-item d-flex justify-content-between align-items-center"
@@ -139,7 +187,6 @@
             <strong>{{ user.name }}</strong>
             <span class="text-muted small ms-2">{{ user.email }}</span>
           </div>
-
           <div class="text-end">
             <div>
               <span class="badge bg-light text-dark">
@@ -150,10 +197,14 @@
               <span
                 class="badge"
                 [ngClass]="{
-                'bg-success': user.status === 'Completed',
-                'bg-warning': user.status === 'Not Completed',
-                'bg-danger': user.status === 'inactive'
-              }"
+                  'bg-success': user.status === 'Completed',
+                  'bg-warning': user.status == 'Not Completed',
+                  'bg-danger': user.status === 'inactive',
+                  'bg-secondary': user.status === 'Not Started',
+                  'bg-warning text-dark': user.status === 'On Progress',
+
+                  
+                }"
               >
                 {{ user.status }}
               </span>

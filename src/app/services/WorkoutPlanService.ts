@@ -42,16 +42,19 @@ export class WorkoutPlanService {
 
   public GetAllWorkouts(): Observable<any> {
     const token = this.getToken();
-    return this.http.get<any>(`${this.baseUrl}/Workout/all`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
-      },
-    });
+    return this.http.get<any>(
+      `${this.baseUrl}/Workout/all?pageNumber=1&pageSize=1000`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
   }
   public updateWorkoutPlan(id: string, updatedPlan: any): Observable<any> {
     const token = this.getToken();
     return this.http.put<any>(
-      `${this.baseUrl}/UpdateWorkoutPlan/${id}`,
+      `${this.baseUrl}/EditWorkoutPlan/${id}`,
       updatedPlan,
       {
         headers: {
@@ -63,16 +66,10 @@ export class WorkoutPlanService {
 
   public deleteWorkoutPlan(id: string): Observable<any> {
     const token = this.getToken();
-    // Uncomment and use the actual API call in production
-    // return this.http.delete(`${this.baseUrl}/DeleteWorkoutPlan/${id}`, {
-    //   headers: {
-    //     Authorization: `Bearer ${token}`,
-    //   },
-    // });
-    console.log('Delete');
-    return new Observable<any>((observer) => {
-      observer.next(null);
-      observer.complete();
+    return this.http.delete(`${this.baseUrl}/Delete-Workout/${id}`, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
     });
   }
 

@@ -71,3 +71,11 @@ button.btn-sm {
 .client-progress {
   padding: 0 150px;
 }
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.badge {
+  font-size: 0.9rem;
+}

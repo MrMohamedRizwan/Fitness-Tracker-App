@@ -56,10 +56,11 @@ export class CoachDashboard implements OnInit {
 
   // Static dummy activity & progress
   recentActivities = [
-    'Assigned "Strength Plan" to John Doe',
-    'Sarah completed Week 2 of "HIIT Program"',
-    'Mike uploaded progress photo',
-    'Lisa updated weight tracking',
+    'Welcome',
+    // 'Assigned "Strength Plan" to John Doe',
+    // 'Sarah completed Week 2 of "HIIT Program"',
+    // 'Mike uploaded progress photo',
+    // 'Lisa updated weight tracking',
   ];
 
   clientProgress = [
@@ -75,6 +76,7 @@ export class CoachDashboard implements OnInit {
     this.fetchClientData();
     this.fetchWorkoutAndDietPlans();
     this.fetchAssignedPlansChart();
+    // this.recentActivities = [...this.recentActivities, 'hni'];
   }
 
   fetchClientData(): void {
@@ -117,18 +119,36 @@ export class CoachDashboard implements OnInit {
   fetchAssignedPlansChart(): void {
     this.coachService.getAssignedPlansChart().subscribe({
       next: (res) => {
-        const labels = res.labels?.$values ?? [];
+        let labels = res.labels?.$values ?? [];
+
+        // Only show the last 7 data points
+        if (labels.length > 7) {
+          labels = labels.slice(-7);
+        }
+
+        // Convert date labels (e.g., '2024-01-05') to '5 Jan'
+        const formattedLabels = labels.map((dateStr: string) => {
+          const date = new Date(dateStr);
+          const day = date.getDate();
+          const month = date.toLocaleString('en-US', { month: 'short' });
+          return `${day} ${month}`;
+        });
 
         const datasets =
-          res.datasets?.$values?.map((ds: any) => ({
-            label: ds.label,
-            data: ds.data?.$values ?? [],
-            backgroundColor:
-              ds.label === 'Workout Plans Assigned' ? '#0d6efd' : '#20c997',
-            borderRadius: 6,
-          })) ?? [];
+          res.datasets?.$values?.map((ds: any) => {
+            // Slice data to match the last 7 labels
+            const data = ds.data?.$values ?? [];
+            const slicedData = data.length > 7 ? data.slice(-7) : data;
+            return {
+              label: ds.label,
+              data: slicedData,
+              backgroundColor:
+                ds.label === 'Workout Plans Assigned' ? '#0d6efd' : '#20c997',
+              borderRadius: 6,
+            };
+          }) ?? [];
 
-        this.barChartData = { labels, datasets };
+        this.barChartData = { labels: formattedLabels, datasets };
       },
       error: (err) => {
         console.error('Error fetching assigned plans chart:', err);

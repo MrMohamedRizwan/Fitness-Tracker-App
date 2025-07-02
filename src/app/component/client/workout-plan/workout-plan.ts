@@ -84,6 +84,7 @@ export class WorkoutPlan implements OnInit {
     this.workoutPlanService.SubmitWorkoutByClient(payload).subscribe({
       next: (res) => {
         console.log(res);
+        this.router.navigate(['client-dashboard']);
       },
       error: (err) => {
         console.error(err);

@@ -121,10 +121,8 @@
     </div>
 
     <!-- Diet Plan: Meals -->
-    <div
-      *ngIf="planForm.value.planType === 'diet' && meals?.length"
-      formArrayName="meals"
-    >
+    <!-- Meals Section (Modified to work like Exercises) -->
+    <div *ngIf="planForm.value.planType === 'diet'" formArrayName="meals">
       <h5>Meals</h5>
       <div
         *ngFor="let meal of meals.controls; let i = index"
@@ -137,7 +135,7 @@
             <input
               type="text"
               class="form-control"
-              formControlName="name"
+              formControlName="mealName"
               placeholder="e.g., Grilled Chicken Salad"
               required
             />
@@ -147,7 +145,7 @@
           <div class="col-md-3">
             <label class="form-label">Meal Type</label>
             <select class="form-select" formControlName="mealType" required>
-              <option value="" disabled selected>Select type</option>
+              <option value="" disabled>Select type</option>
               <option value="breakfast">Breakfast</option>
               <option value="lunch">Lunch</option>
               <option value="dinner">Dinner</option>
@@ -159,19 +157,35 @@
               type="text"
               class="form-control"
               formControlName="calories"
+              placeholder="e.g., 10"
             />
           </div>
           <div class="col-md-3">
             <label class="form-label">Protein (g)</label>
-            <input type="text" class="form-control" formControlName="protein" />
+            <input
+              type="text"
+              class="form-control"
+              formControlName="proteinGrams"
+              placeholder="e.g., 10"
+            />
           </div>
           <div class="col-md-3">
             <label class="form-label">Carbs (g)</label>
-            <input type="text" class="form-control" formControlName="carbs" />
+            <input
+              type="text"
+              class="form-control"
+              formControlName="carbsGrams"
+              placeholder="e.g., 10"
+            />
           </div>
           <div class="col-md-3">
             <label class="form-label">Fats (g)</label>
-            <input type="text" class="form-control" formControlName="fats" />
+            <input
+              type="text"
+              class="form-control"
+              formControlName="fatGrams"
+              placeholder="e.g., 10"
+            />
           </div>
         </div>
         <div class="text-end mt-2">

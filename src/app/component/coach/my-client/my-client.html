@@ -45,9 +45,9 @@
               <span
                 [ngClass]="{
                   'badge bg-danger': client.status === 'Unassigned',
-                  'badge bg-warning text-dark': client.status === 'Not Completed',
+                  'badge bg-warning ': client.status === 'Not Completed',
                   'badge bg-success': client.status === 'Completed',
-                  'badge  bg-warning text-dark': client.status === 'On Progress',
+                  'badge  bg-warning': client.status === 'On Progress',
                   'badge bg-secondary': client.status === 'Not Started'
                 }"
                 style="

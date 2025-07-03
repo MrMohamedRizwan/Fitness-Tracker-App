@@ -85,7 +85,16 @@ export class CoachDashboard implements OnInit {
         const clients = res.items?.$values ?? [];
         this.totalClients.set(clients.length);
         this.clientPro.set(clients);
-
+        // Count clients with status 'unassigned'
+        const unassignedCount = clients.filter(
+          (c: any) => c.status === 'Unassigned'
+        ).length;
+        if (unassignedCount > 0) {
+          this.recentActivities = [
+            ...[`There are ${unassignedCount} unassigned clients`],
+          ];
+          console.log(unassignedCount);
+        }
         // Process client status chart (optional)
         const statusCounts = clients.reduce((acc: any, c: any) => {
           acc[c.status] = (acc[c.status] || 0) + 1;

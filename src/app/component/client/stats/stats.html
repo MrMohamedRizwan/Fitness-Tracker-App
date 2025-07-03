@@ -46,16 +46,20 @@
     </div> -->
 
     <div class="col-md-6">
-      <div class="card h-100 shadow-sm border-0">
-        <div class="card-header fw-bold">
-          🔥 Calories Intake vs Burnt (Line)
+      <div class="card h-100 shadow-sm border-0 d-flex align-items-center">
+        <div class="card-header fw-bold text-center w-100">
+          🔥 Calories Intake vs Burnt
         </div>
-        <div class="card-body">
+        <div
+          class="card-body d-flex align-items-center justify-content-center"
+          style="width: 350px; height: 350px"
+        >
           <canvas
             baseChart
             [data]="calorieLineChartData"
-            [type]="'line'"
-            class="w-100"
+            [type]="'pie'"
+            [options]="{ plugins: { legend: { position: 'bottom' } } }"
+            style="width: 250px; height: 200px"
           ></canvas>
         </div>
       </div>

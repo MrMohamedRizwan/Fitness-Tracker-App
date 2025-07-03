@@ -44,6 +44,17 @@ export class ClientDashboard implements OnInit, OnDestroy, AfterViewInit {
       }
     });
   }
+
+  private reminderInterval: any;
+  setupDrinkWaterReminder() {
+    this.reminderInterval = setInterval(() => {
+      const reminder = 'Drink water';
+      this.notificationList.push(reminder);
+      this.progressList = [reminder, ...this.progressList];
+      this.cdr.detectChanges();
+    }, 60 * 1000); // every minute from now
+  }
+
   signalRNotification() {
     console.log('Signal R');
   }
@@ -127,6 +138,7 @@ export class ClientDashboard implements OnInit, OnDestroy, AfterViewInit {
     });
   }
   ngOnInit(): void {
+    this.setupDrinkWaterReminder();
     this.getProgresss();
     this.signalRNotification();
     this.clientService.getMyDetails().subscribe({
@@ -152,6 +164,10 @@ export class ClientDashboard implements OnInit, OnDestroy, AfterViewInit {
 
   ngOnDestroy(): void {
     this.notificationService.stopConnection(); // optional cleanup
+
+    if (this.reminderInterval) {
+      clearInterval(this.reminderInterval);
+    }
   }
 
   getAssignedPlans(): void {

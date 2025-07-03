@@ -107,7 +107,9 @@ export class Viewprogress implements OnInit {
     );
 
     this.caloriesChartData = {
-      labels: filteredAssigns.map((_, i) => `Plan ${i + 1}`),
+      labels: filteredAssigns.map((a) =>
+        a.assignedDate ? new Date(a.assignedDate).toLocaleDateString() : ''
+      ),
       datasets: [
         {
           label: 'Calories Intake',
@@ -125,13 +127,57 @@ export class Viewprogress implements OnInit {
 
   setupCalorieLineChart() {
     const assigns = this.assignments();
-    const labels = assigns.map((_, i) => `Plan ${i + 1}`);
+
+    const calorieMap: Record<string, { intake: number; burnt: number }> = {};
+
+    for (const assign of assigns) {
+      const submissionDates: string[] = assign.submittedOn?.$values || [];
+      const intake = Number(assign.caloriesIntake);
+      const burnt = Number(assign.caloriesBurnt);
+
+      // Skip if both are 0
+      if (intake === 0 && burnt === 0) continue;
+
+      for (const isoDate of submissionDates) {
+        const dateKey = new Date(isoDate).toLocaleDateString();
+
+        if (!calorieMap[dateKey]) {
+          calorieMap[dateKey] = { intake: 0, burnt: 0 };
+        }
+
+        if (intake > 0) {
+          calorieMap[dateKey].intake += intake;
+        }
+
+        if (burnt > 0) {
+          calorieMap[dateKey].burnt += burnt;
+        }
+
+        // Break if you want to assign to only the first date
+        // break;
+      }
+    }
+
+    // Sort date keys and generate chart arrays
+    const sortedDates = Object.keys(calorieMap).sort(
+      (a, b) => new Date(a).getTime() - new Date(b).getTime()
+    );
+
+    const labels: string[] = [];
+    const intakeData: number[] = [];
+    const burntData: number[] = [];
+
+    for (const date of sortedDates) {
+      labels.push(date);
+      intakeData.push(calorieMap[date].intake);
+      burntData.push(calorieMap[date].burnt);
+    }
 
     this.calorieLineChartData = {
       labels,
       datasets: [
         {
-          data: assigns.map((a) => a.caloriesIntake),
+          data: intakeData,
           label: 'Calories Intake',
           borderColor: 'orange',
           fill: false,
@@ -139,7 +185,7 @@ export class Viewprogress implements OnInit {
           pointBackgroundColor: 'orange',
         },
         {
-          data: assigns.map((a) => a.caloriesBurnt),
+          data: burntData,
           label: 'Calories Burnt',
           borderColor: 'red',
           fill: false,

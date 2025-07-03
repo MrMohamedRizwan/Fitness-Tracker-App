@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 })
 export class AdminDashboard implements OnInit {
   coaches = signal<Coach[]>([]);
+  clients = signal<any[]>([]);
 
   constructor(
     private userService: UserService,
@@ -22,6 +23,22 @@ export class AdminDashboard implements OnInit {
 
   ngOnInit(): void {
     this.loadCoaches();
+    this.loadClients();
+  }
+
+  viewClient(id: any) {}
+  deleteClient(id: any) {}
+  loadClients(): void {
+    this.userService.getAllClients().subscribe({
+      next: (res: any) => {
+        const list = res?.$values || res?.items?.$values || [];
+        this.clients.set(list);
+        console.log('✅ Clients loaded:', this.clients());
+      },
+      error: (err) => {
+        console.error('❌ Failed to load coaches:', err);
+      },
+    });
   }
 
   loadCoaches(): void {

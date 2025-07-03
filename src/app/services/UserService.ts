@@ -85,6 +85,18 @@ export class UserService {
       }
     );
   }
+
+  getAllClients(): Observable<any[]> {
+    const token = this.getToken();
+    return this.http.get<any[]>(
+      'http://localhost:5002/api/v1/Client/getAllClients',
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+  }
   deleteCoach(id: any): Observable<any[]> {
     {
       const token = this.getToken();

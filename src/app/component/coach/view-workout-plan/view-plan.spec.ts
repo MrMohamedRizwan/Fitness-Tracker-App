@@ -42,8 +42,7 @@ describe('ViewPlan Component', () => {
     };
 
     TestBed.configureTestingModule({
-      imports: [CommonModule, FormsModule],
-      declarations: [ViewPlan],
+      imports: [ViewPlan, CommonModule, FormsModule],
       providers: [
         { provide: WorkoutPlanService, useValue: mockWorkoutService },
         { provide: Router, useValue: mockRouter },

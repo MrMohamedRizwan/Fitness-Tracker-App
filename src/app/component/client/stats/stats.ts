@@ -123,7 +123,7 @@ export class Stats implements OnInit {
         {
           label: 'Calories Intake',
           data: filteredAssigns.map((a) => a.caloriesIntake),
-          backgroundColor: 'orange',
+          // backgroundColor: 'orange',
         },
         {
           label: 'Calories Burnt',
@@ -137,25 +137,33 @@ export class Stats implements OnInit {
   setupCalorieLineChart() {
     const assigns = this.assignments();
     const labels = assigns.map((_, i) => `Plan ${i + 1}`);
+    // Calculate total calorie intake
+    const totalCalorieIntake = assigns.reduce(
+      (sum, a) => sum + (a.caloriesIntake || 0),
+      0
+    );
+    const calorieIntakeCount = assigns.filter(
+      (a) => a.caloriesIntake && a.caloriesIntake !== 0
+    ).length;
 
+    const totalcalorieBurnt = assigns.reduce(
+      (sum, a) => sum + (a.caloriesBurnt || 0),
+      0
+    );
+
+    const calorieBurntCount = assigns.filter(
+      (a) => a.caloriesBurnt && a.caloriesBurnt !== 0
+    ).length;
     this.calorieLineChartData = {
-      labels,
+      labels: ['Total Calories Intake', 'Total Calories Burnt'],
       datasets: [
         {
-          data: assigns.map((a) => a.caloriesIntake),
-          label: 'Calories Intake',
-          borderColor: 'orange',
-          fill: false,
-          tension: 0.3,
-          pointBackgroundColor: 'orange',
-        },
-        {
-          data: assigns.map((a) => a.caloriesBurnt),
-          label: 'Calories Burnt',
-          borderColor: 'red',
-          fill: false,
-          tension: 0.3,
-          pointBackgroundColor: 'red',
+          data: [
+            totalCalorieIntake / calorieIntakeCount,
+            totalcalorieBurnt / calorieBurntCount,
+          ],
+          backgroundColor: ['orange', 'red'],
+          label: 'Calories Distribution',
         },
       ],
     };

@@ -43,8 +43,8 @@ export class LoginComponet {
     this.userService.validateUser(this.loginForm.value).subscribe({
       next: () => {
         this.toastService.showToast(
-          'Login Successful',
-          'You have been logged in.',
+          'Success',
+          'Login completed successfully.',
           'success'
         );
         // this.toastr.success('Operation Successful!', 'Success');

@@ -1,35 +1,96 @@
-<div class="container mt-4">
-  <h2 class="mb-4 text-primary">All Coaches</h2>
+<div class="container my-4">
+  <h2 class="mb-4 text-primary text-center">Admin Dashboard</h2>
 
-  <div *ngIf="!coaches()?.length" class="text-muted text-center">
-    No coaches found.
+  <!-- Section: Coaches -->
+  <div class="mb-5">
+    <h4 class="text-secondary mb-3">
+      <i class="bi bi-person-badge-fill me-2"></i>All Coaches
+    </h4>
+
+    <div *ngIf="!coaches()?.length" class="text-muted text-center">
+      No coaches found.
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <div class="col" *ngFor="let coach of coaches()">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h5 class="card-title text-dark d-flex align-items-center">
+              <i class="bi bi-person-circle me-2 fs-4 text-primary"></i>
+              {{ coach.name }}
+            </h5>
+            <p class="card-text text-muted mb-1">
+              <strong>Email:</strong> {{ coach.email }}
+            </p>
+            <p class="card-text text-muted mb-0">
+              <strong>Experience:</strong> {{ coach.yearsOfExperience }} years
+            </p>
+          </div>
+          <div
+            class="card-footer bg-white border-top-0 d-flex justify-content-end gap-2"
+          >
+            <!-- <button
+              class="btn btn-outline-primary btn-sm"
+              (click)="viewCoach(coach.id)"
+            >
+              <i class="bi bi-eye"></i> View
+            </button> -->
+            <button
+              class="btn btn-outline-danger btn-sm"
+              (click)="deleteCoach(coach.id)"
+            >
+              <i class="bi bi-trash"></i> Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-    <div class="col" *ngFor="let coach of coaches()">
-      <div class="card h-100 shadow-sm border-0">
-        <div class="card-body">
-          <h5 class="card-title text-dark">{{ coach.name }}</h5>
-          <p class="card-text text-muted">
-            <strong>Email:</strong> {{ coach.email }}<br />
-            <strong>Experience:</strong> {{ coach.yearsOfExperience }} years
-          </p>
-        </div>
-        <div
-          class="card-footer bg-white border-top-0 d-flex justify-content-end gap-2"
-        >
-          <button
-            class="btn btn-outline-primary btn-sm"
-            (click)="viewCoach(coach.id)"
+  <!-- Section: Clients -->
+  <div>
+    <h4 class="text-secondary mb-3">
+      <i class="bi bi-people-fill me-2"></i>All Clients
+    </h4>
+
+    <div *ngIf="!clients()?.length" class="text-muted text-center">
+      No clients found.
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <div class="col" *ngFor="let client of clients()">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h5 class="card-title text-dark d-flex align-items-center">
+              <i class="bi bi-person-lines-fill me-2 fs-4 text-success"></i>
+              {{ client.name }}
+            </h5>
+            <p class="card-text text-muted mb-1">
+              <strong>Email:</strong> {{ client.email }}
+            </p>
+            <p class="card-text text-muted mb-1">
+              <strong>Gender:</strong> {{ client.gender || 'N/A' }}
+            </p>
+            <p class="card-text text-muted mb-0">
+              <strong>Age:</strong> {{ client.age }}
+            </p>
+          </div>
+          <div
+            class="card-footer bg-white border-top-0 d-flex justify-content-end gap-2"
           >
-            <i class="bi bi-eye"></i> View
-          </button>
-          <button
-            class="btn btn-outline-danger btn-sm"
-            (click)="deleteCoach(coach.id)"
-          >
-            <i class="bi bi-trash"></i> Delete
-          </button>
+            <!-- <button
+              class="btn btn-outline-primary btn-sm"
+              (click)="viewClient(client.id)"
+            >
+              <i class="bi bi-eye"></i> View
+            </button> -->
+            <button
+              class="btn btn-outline-danger btn-sm"
+              (click)="deleteClient(client.id)"
+            >
+              <i class="bi bi-trash"></i> Delete
+            </button>
+          </div>
         </div>
       </div>
     </div>

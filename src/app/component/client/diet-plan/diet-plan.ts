@@ -129,7 +129,7 @@ export class DietPlan implements OnInit {
   addNewMeal(): void {
     const { mealType, mealName, calories } = this.newMeal;
 
-    if (!mealType.trim() || !mealName.trim() || calories <= 0) {
+    if (!mealType.trim() || !mealName.trim()) {
       alert('❌ Please fill all fields correctly.');
       return;
     }

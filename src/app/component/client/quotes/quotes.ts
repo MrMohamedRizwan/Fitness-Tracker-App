@@ -23,6 +23,20 @@ export class Quotes implements OnInit {
     'Strive for progress, not perfection.',
     'You are stronger than you think.',
     'Success starts with self-discipline.',
+    'Discipline is the bridge between goals and accomplishment.',
+    'Don’t limit your challenges. Challenge your limits.',
+    'It’s going to be a journey. It’s not a sprint to get in shape.',
+    'Make your body the sexiest outfit you own.',
+    'You don’t find willpower, you create it.',
+    'Excuses don’t burn calories.',
+    'The only bad workout is the one that didn’t happen.',
+    'It never gets easier, you just get stronger.',
+    'Your future self will thank you for the work you do today.',
+    'One workout at a time, one day at a time.',
+    'Strong is not just physical. It’s a mindset.',
+    'The difference between try and triumph is a little ‘umph’!',
+    'Fitness is like a relationship. You can’t cheat and expect it to work.',
+    'Fall in love with taking care of yourself.',
   ];
 
   selectedQuote: string = '';

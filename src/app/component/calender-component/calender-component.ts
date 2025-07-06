@@ -66,11 +66,17 @@ export class CalenderComponent implements OnInit {
 
         this.workoutIds = this.workoutLogs.reduce(
           (acc: Record<string, string[]>, log: any) => {
-            const date = log.date ? log.date.split('T')[0] : null;
-            if (date) {
-              if (!acc[date]) acc[date] = [];
-              acc[date].push(log.id);
-            }
+            const dateObj = new Date(log.date);
+            const localDate =
+              dateObj.getFullYear() +
+              '-' +
+              String(dateObj.getMonth() + 1).padStart(2, '0') +
+              '-' +
+              String(dateObj.getDate()).padStart(2, '0');
+
+            if (!acc[localDate]) acc[localDate] = [];
+            acc[localDate].push(log.id);
+
             return acc;
           },
           {}
@@ -95,14 +101,25 @@ export class CalenderComponent implements OnInit {
   }
 
   hasWorkoutEntry(date: Date): boolean {
-    const iso = date.toISOString().split('T')[0];
-    return this.workoutDates.includes(iso);
+    const localDate =
+      date.getFullYear() +
+      '-' +
+      String(date.getMonth() + 1).padStart(2, '0') +
+      '-' +
+      String(date.getDate()).padStart(2, '0');
+    return this.workoutDates.includes(localDate);
   }
 
   onDateClick(date: Date) {
     this.selectedDate = date;
-    const isoDate = date.toISOString().split('T')[0];
-    const workoutIdsForDate = this.workoutIds?.[isoDate] || [];
+    const localDate =
+      date.getFullYear() +
+      '-' +
+      String(date.getMonth() + 1).padStart(2, '0') +
+      '-' +
+      String(date.getDate()).padStart(2, '0');
+
+    const workoutIdsForDate = this.workoutIds?.[localDate] || [];
 
     this.selectedWorkoutLogs = [];
 

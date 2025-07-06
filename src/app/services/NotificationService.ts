@@ -20,6 +20,7 @@ export class NotificationService {
     this.extractClientIdFromToken();
     if (this.currentClientId) {
       this.startConnection();
+      this.joinCoachGroup(this.currentClientId);
     }
   }
 
@@ -51,6 +52,17 @@ export class NotificationService {
       console.error('❌ Failed to parse or decode token:', e);
     }
   }
+  public joinCoachGroup(coachId: string): void {
+    if (
+      this.connection &&
+      this.connection.state === signalR.HubConnectionState.Connected
+    ) {
+      this.connection
+        .invoke('JoinCoachGroup', coachId)
+        .then(() => console.log('✅ Joined coach group:', coachId))
+        .catch((err) => console.error('❌ Failed to join coach group:', err));
+    }
+  }
 
   private startConnection(): void {
     this.connection = new signalR.HubConnectionBuilder()
@@ -60,7 +72,20 @@ export class NotificationService {
       .withAutomaticReconnect([0, 2000, 5000, 10000])
       .configureLogging(signalR.LogLevel.Information)
       .build();
-
+    this.connection.on('ProgressUploaded', (data: any) => {
+      this.ngZone.run(() => {
+        console.log('📥 Progress uploaded notification received:', data);
+        this.notification.set({
+          message: data.clientName,
+          assignedOn: '',
+          workoutPlanId: '',
+          dietPlanId: '',
+        });
+        // alert(
+        //   `Client ${data.clientName} uploaded progress:\nHeight: ${data.height} cm\nWeight: ${data.weight} kg`
+        // );
+      });
+    });
     this.connection
       .start()
       .then(() => this.connection.invoke('Subscribe', this.currentClientId))

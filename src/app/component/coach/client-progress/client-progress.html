@@ -57,7 +57,7 @@
 
   <div *ngIf="client() as c" class="container mt-4">
     <div class="text-center mb-4">
-      <h3>{{ c.name }}'s Progress</h3>
+      <h3>{{ c.name }}'s Progress hdaubuhbah</h3>
       <p>{{ c.email }}</p>
     </div>
     <div class="row justify-content-center">
@@ -66,9 +66,7 @@
         <h5 class="text-primary mb-3 text-center" style="margin-right: 2rem">
           Workout Plans In Progress
         </h5>
-        <div
-          class="horizontal-scroll d-flex flex-row justify-content-center overflow-auto pb-2 w-100"
-        >
+        <div class="horizontal-scroll d-flex flex-row overflow-auto pb-2 w-100">
           <div
             *ngFor="let plan of workoutPlans()"
             class="card mb-3 me-3 shadow workout-card"
@@ -152,13 +150,11 @@
       <!-- Diet Plans -->
       <div class="col-md-6 d-flex flex-column align-items-center">
         <h5 class="text-success mb-3 text-center">Diet Plans In Progress</h5>
-        <div
-          class="horizontal-scroll d-flex flex-row justify-content-center overflow-auto pb-2 w-100"
-        >
+        <div class="horizontal-scroll d-flex flex-row overflow-auto pb-2 w-100">
           <div
             *ngFor="let plan of dietPlans()"
             class="card mb-3 me-3 shadow diet-card"
-            style="min-width: 260px; max-width: 280px"
+            style="min-width: 280px; max-width: 280px"
           >
             <div
               class="card-header bg-success text-white d-flex align-items-center"
@@ -198,7 +194,7 @@
               >
                 <button
                   class="btn btn-outline-success btn-sm"
-                  (click)="markAsCompleted(plan.planAssignmentId, 'diet')"
+                  (click)="markAsCompleted(plan.planAssignmentId, 'diet'); plan.status = 'Completed'"
                   title="Mark as Completed"
                 >
                   Completed

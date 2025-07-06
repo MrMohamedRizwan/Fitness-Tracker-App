@@ -52,11 +52,18 @@ export class ClientDashboard implements OnInit, OnDestroy, AfterViewInit {
       this.notificationList.push(reminder);
       this.progressList = [reminder, ...this.progressList];
       this.cdr.detectChanges();
-    }, 60 * 1000); // every minute from now
+    }, 60 * 1000);
   }
 
   signalRNotification() {
-    console.log('Signal R');
+    const notification = this.notificationService.notification();
+    if (notification) {
+      setTimeout(() => {
+        this.notificationList.push(notification.message);
+        this.progressList = [notification.message, ...this.progressList];
+        this.cdr.detectChanges();
+      });
+    }
   }
   clientId: string | null = null;
   progressList = ['Welcome'];

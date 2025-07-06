@@ -27,7 +27,20 @@ export class AdminDashboard implements OnInit {
   }
 
   viewClient(id: any) {}
-  deleteClient(id: any) {}
+  deleteClient(id: any) {
+    console.log('Delete ' + id);
+    if (!confirm('Are you sure you want to delete this coach?')) return;
+
+    this.userService.deleteClient(id).subscribe({
+      next: (res) => {
+        console.log(res);
+        this.cdRef.detectChanges();
+      },
+      error: (error) => {
+        console.error(error);
+      },
+    });
+  }
   loadClients(): void {
     this.userService.getAllClients().subscribe({
       next: (res: any) => {

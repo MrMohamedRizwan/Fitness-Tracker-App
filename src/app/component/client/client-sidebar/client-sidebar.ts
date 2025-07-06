@@ -32,6 +32,11 @@ export class ClientSidebar {
       icon: 'bi bi-bar-chart-line-fill',
       label: 'Stats & Analytics',
     },
+    {
+      to: '/chatClient',
+      icon: 'bi bi-chat-fill',
+      label: 'Chat with coach',
+    },
   ];
 
   handleLogout() {

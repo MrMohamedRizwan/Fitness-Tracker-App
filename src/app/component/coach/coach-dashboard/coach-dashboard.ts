@@ -1,8 +1,15 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, signal } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  effect,
+  OnInit,
+  signal,
+} from '@angular/core';
 import { ChartConfiguration, ChartOptions, ChartType } from 'chart.js';
 import { NgChartsModule } from 'ng2-charts';
 import { CoachService } from '../../../services/CoachService';
+import { NotificationService } from '../../../services/NotificationService';
 
 @Component({
   selector: 'app-coach-dashboard',
@@ -55,30 +62,60 @@ export class CoachDashboard implements OnInit {
   pieChartType: ChartType = 'pie';
 
   // Static dummy activity & progress
-  recentActivities = [
-    'Welcome',
-    // 'Assigned "Strength Plan" to John Doe',
-    // 'Sarah completed Week 2 of "HIIT Program"',
-    // 'Mike uploaded progress photo',
-    // 'Lisa updated weight tracking',
-  ];
+  recentActivities = ['Welcome'];
 
   clientProgress = [
-    { name: 'John Doe', progress: 75 },
-    { name: 'Sarah Smith', progress: 50 },
-    { name: 'Mike Brown', progress: 30 },
-    { name: 'Lisa Ray', progress: 90 },
+    // { name: 'John Doe', progress: 75 },
+    // { name: 'Sarah Smith', progress: 50 },
+    // { name: 'Mike Brown', progress: 30 },
+    // { name: 'Lisa Ray', progress: 90 },
   ];
+  notificationList: string[] = [];
 
-  constructor(private coachService: CoachService) {}
+  constructor(
+    private coachService: CoachService,
+    private notificationService: NotificationService,
+    private cdr: ChangeDetectorRef
+  ) {
+    effect(() => {
+      const notification = this.notificationService.notification();
+      if (notification) {
+        // ✅ Avoid change detection conflict
+        setTimeout(() => {
+          console.log(notification.message);
+          this.notificationList.push(
+            'Progress Updated by' + notification.message
+          );
+          this.recentActivities = [
+            'Progress Updated by ' + notification.message,
+            ...this.recentActivities,
+          ];
+          this.cdr.detectChanges();
+        });
+      }
+    });
+  }
 
   ngOnInit(): void {
     this.fetchClientData();
     this.fetchWorkoutAndDietPlans();
+    this.signalRNotification();
     this.fetchAssignedPlansChart();
     // this.recentActivities = [...this.recentActivities, 'hni'];
   }
-
+  signalRNotification() {
+    const notification = this.notificationService.notification();
+    if (notification) {
+      setTimeout(() => {
+        this.notificationList.push(notification.message);
+        this.recentActivities = [
+          notification.message,
+          ...this.recentActivities,
+        ];
+        this.cdr.detectChanges();
+      });
+    }
+  }
   fetchClientData(): void {
     this.coachService.getClientsList().subscribe({
       next: (res) => {

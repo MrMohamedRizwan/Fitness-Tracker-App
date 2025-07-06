@@ -26,6 +26,8 @@ import { Stats } from './component/client/stats/stats';
 import { Viewprogress } from './component/coach/viewprogress/viewprogress';
 import { AdminDashboard } from './component/admin/admin-dashboard/admin-dashboard';
 import { Toasssss } from './toasssss/toasssss';
+import { ChatComponent } from './chat-component/chat-component';
+import { ChatCoach } from './component/coah/chat-coach/chat-coach';
 
 export const routes: Routes = [
   { path: 'notification', component: Notification },
@@ -52,6 +54,7 @@ export const routes: Routes = [
       { path: 'create-plan', component: CreatePlan },
       { path: 'view-workout-plan', component: ViewPlan },
       { path: 'view-diet-plan', component: ViewDietPlan },
+      { path: 'chatCoach', component: ChatCoach },
 
       { path: 'client-details/:clientId', component: ClientProgress },
       { path: 'workout-details/:workoutId', component: WorkoutDetails },
@@ -77,6 +80,7 @@ export const routes: Routes = [
       },
       { path: 'progress', component: Progress },
       { path: 'stats-analytics', component: Stats },
+      { path: 'chatClient', component: ChatComponent },
     ],
   },
   {

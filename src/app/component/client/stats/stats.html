@@ -74,8 +74,9 @@
         <div class="col-md-4 mb-4" *ngFor="let img of proImages()">
           <div class="card h-100 border">
             <!-- img.path -->
+            <!-- <pre>{{img|json}} </pre> -->
             <img
-              [src]="'https://media.istockphoto.com/id/1514093059/vector/thumbs-up-hand-emoji-icon-illustration-sign-human-gesture-vector-symbol-emoticon-design.jpg?s=1024x1024&w=is&k=20&c=62OK_K2j-KUFoHMorlUfSnRQuRXbT_lQFnXBUy4LFqY='"
+              [src]="`https://fitnessdbbucket.s3.ap-south-1.amazonaws.com/${img.imagePath}`"
               class="card-img-top"
               alt="Progress"
               style="object-fit: contain; height: 250px"

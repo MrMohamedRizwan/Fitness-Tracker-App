@@ -127,41 +127,40 @@ export class Viewprogress implements OnInit {
 
   setupCalorieLineChart() {
     const assigns = this.assignments();
-
     const calorieMap: Record<string, { intake: number; burnt: number }> = {};
 
     for (const assign of assigns) {
-      const submissionDates: string[] = assign.submittedOn?.$values || [];
-      const intake = Number(assign.caloriesIntake);
-      const burnt = Number(assign.caloriesBurnt);
+      const rawDates = assign.submittedOn?.$values;
 
-      // Skip if both are 0
-      if (intake === 0 && burnt === 0) continue;
+      if (!Array.isArray(rawDates)) continue;
 
-      for (const isoDate of submissionDates) {
+      for (const entry of rawDates) {
+        const isoDate = entry.date;
+        const intake = Number(entry.caloriesIntake || 0);
+        const burnt = Number(entry.caloriesBurnt || 0);
+
         const dateKey = new Date(isoDate).toLocaleDateString();
 
         if (!calorieMap[dateKey]) {
           calorieMap[dateKey] = { intake: 0, burnt: 0 };
         }
 
-        if (intake > 0) {
-          calorieMap[dateKey].intake += intake;
-        }
-
-        if (burnt > 0) {
-          calorieMap[dateKey].burnt += burnt;
-        }
-
-        // Break if you want to assign to only the first date
-        // break;
+        calorieMap[dateKey].intake += intake;
+        calorieMap[dateKey].burnt += burnt;
       }
     }
+    console.table(calorieMap);
+    // Sort dates
+    const sortedDates = Object.keys(calorieMap)
+      .sort(
+        (a, b) => new Date(b).getTime() - new Date(a).getTime() // 🔁 descending order
+      )
+      .reverse();
 
-    // Sort date keys and generate chart arrays
-    const sortedDates = Object.keys(calorieMap).sort(
-      (a, b) => new Date(a).getTime() - new Date(b).getTime()
-    );
+    // const labels = images.map((img) =>
+    //   new Date(img.uploadedAt).toLocaleDateString()
+    // );
+    // const sortedDates = Object.keys(calorieMap).sort(); // ISO format sorts correctly
 
     const labels: string[] = [];
     const intakeData: number[] = [];

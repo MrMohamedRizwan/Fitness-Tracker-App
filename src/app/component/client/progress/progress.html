@@ -7,48 +7,6 @@
     </p>
   </div>
 
-  <!-- Chart Section -->
-  <!-- <div class="card shadow-sm mb-5">
-    <div class="card-header bg-white">
-      <h5 class="mb-0">Progress Overview</h5>
-    </div>
-    <div class="card-body">
-      <canvas
-        baseChart
-        [datasets]="lineChartData"
-        [labels]="lineChartLabels"
-        [options]="lineChartOptions"
-        [legend]="lineChartLegend"
-        [type]="lineChartType"
-      ></canvas>
-    </div>
-  </div> -->
-
-  <!-- Progress Cards -->
-  <!-- <div class="mb-5">
-    <h4 class="mb-4">Recent Progress</h4>
-    <div class="row g-4">
-      <div *ngFor="let progress of progressList" class="col-md-4">
-        <div class="card h-100 shadow-sm border">
-          <img
-            [src]="'http://localhost:5002/' + progress.imagePath"
-            class="card-img-top"
-            alt="Progress Image"
-          />
-          <div class="card-body">
-            <p><strong>Height:</strong> {{ progress.height }} cm</p>
-            <p><strong>Weight:</strong> {{ progress.weight }} kg</p>
-            <p class="text-muted mb-0">
-              <small
-                >Uploaded: {{ progress.uploadedAt | date: 'mediumDate' }}</small
-              >
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
   <!-- Upload Form -->
   <div class="card shadow-sm">
     <div class="card-header bg-white">
@@ -94,7 +52,16 @@
             class="form-control"
             [(ngModel)]="height"
             placeholder="e.g. 170"
+            #heightInput="ngModel"
           />
+          <div
+            class="text-danger small mt-1"
+            *ngIf="heightData.length && height < heightData[heightData.length - 1] && heightInput.touched"
+          >
+            <i class="bi bi-exclamation-circle-fill"></i>
+            Height must be greater than or equal to your previous entry ({{
+            heightData[heightData.length - 1] }} cm).
+          </div>
         </div>
         <div class="col-md-6">
           <label class="form-label">Weight (kg)</label>
@@ -112,14 +79,22 @@
         <button
           class="btn btn-primary w-100"
           (click)="onSubmit()"
-          [disabled]="submitting()"
+          [disabled]="!isFormValid || submitting() || !canUploadProgress()"
         >
           {{ submitting() ? 'Submitting...' : 'Submit Progress' }}
         </button>
       </div>
+      <div
+        *ngIf="!canUploadProgress()"
+        class="alert alert-warning mt-3 text-center"
+      >
+        <strong>You can only upload progress once every 5 days.</strong><br />
+        Last uploaded on: {{ lastUploadedDate | date:'mediumDate' }}
+      </div>
     </div>
   </div>
-  <br />
-  <br />
+
+  <br /><br />
+
   <app-calender-component [clientId]="this.clientId"></app-calender-component>
 </div>

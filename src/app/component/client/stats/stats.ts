@@ -136,32 +136,39 @@ export class Stats implements OnInit {
 
   setupCalorieLineChart() {
     const assigns = this.assignments();
-    const labels = assigns.map((_, i) => `Plan ${i + 1}`);
-    // Calculate total calorie intake
-    const totalCalorieIntake = assigns.reduce(
-      (sum, a) => sum + (a.caloriesIntake || 0),
-      0
-    );
-    const calorieIntakeCount = assigns.filter(
-      (a) => a.caloriesIntake && a.caloriesIntake !== 0
-    ).length;
+    let totalIntake = 0;
+    let totalBurnt = 0;
+    let intakeCount = 0;
+    let burntCount = 0;
 
-    const totalcalorieBurnt = assigns.reduce(
-      (sum, a) => sum + (a.caloriesBurnt || 0),
-      0
-    );
+    for (const assign of assigns) {
+      const entries = assign.submittedOn?.$values;
+      if (!Array.isArray(entries)) continue;
 
-    const calorieBurntCount = assigns.filter(
-      (a) => a.caloriesBurnt && a.caloriesBurnt !== 0
-    ).length;
+      for (const entry of entries) {
+        const intake = Number(entry.caloriesIntake || 0);
+        const burnt = Number(entry.caloriesBurnt || 0);
+
+        if (intake > 0) {
+          totalIntake += intake;
+          intakeCount++;
+        }
+
+        if (burnt > 0) {
+          totalBurnt += burnt;
+          burntCount++;
+        }
+      }
+    }
+
+    const avgIntake = intakeCount > 0 ? totalIntake / intakeCount : 0;
+    const avgBurnt = burntCount > 0 ? totalBurnt / burntCount : 0;
+
     this.calorieLineChartData = {
-      labels: ['Total Calories Intake', 'Total Calories Burnt'],
+      labels: ['Avg Calories Intake', 'Avg Calories Burnt'],
       datasets: [
         {
-          data: [
-            totalCalorieIntake / calorieIntakeCount,
-            totalcalorieBurnt / calorieBurntCount,
-          ],
+          data: [avgIntake, avgBurnt],
           backgroundColor: ['orange', 'red'],
           label: 'Calories Distribution',
         },

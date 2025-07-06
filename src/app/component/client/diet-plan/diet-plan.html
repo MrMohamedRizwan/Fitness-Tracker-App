@@ -4,7 +4,7 @@
       <h2 class="fw-bold">{{ plan.title }}</h2>
       <p class="text-muted">{{ plan.description }}</p>
       <div class="text-muted">
-        <strong>Duration:</strong> {{ plan.durationInWeeks }} weeks
+        <!-- <strong>Duration:</strong> {{ plan.durationInWeeks }} weeks -->
       </div>
     </div>
 
@@ -124,6 +124,7 @@
             <option value="Snack">Snack</option>
           </select>
         </div>
+
         <div class="col-md-4">
           <label class="form-label fw-semibold" for="newMealName"
             >Meal Name</label
@@ -136,6 +137,12 @@
             name="newMealName"
             id="newMealName"
           />
+          <div
+            *ngIf="newMeal.mealName && newMeal.mealName.length > 0 && newMeal.mealName.length < 4"
+            class="text-danger small mt-1"
+          >
+            Meal name must be at least 4 characters.
+          </div>
         </div>
         <div class="col-md-4">
           <label class="form-label fw-semibold" for="newMealCalories"

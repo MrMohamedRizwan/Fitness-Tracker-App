@@ -88,6 +88,19 @@ export class ClientProgress implements OnInit {
   }
   cancelPlan(planId: string, type: 'workout' | 'diet') {
     console.log(`❌ Cancelling ${type} plan ${planId}`);
+    if (confirm('Are you sure you want to cancel this plan?')) {
+      this.coachServcie.deleteAssignedPlans(planId).subscribe({
+        next: (res) => {
+          console.log(res);
+        },
+        error: (err) => {
+          console.error(err);
+        },
+      });
+      console.log(`Plan ${planId} cancelled.`);
+    } else {
+      console.log('Cancellation aborted by user.');
+    }
     // Call API to cancel (optional)
   }
   progressButton() {

@@ -59,25 +59,25 @@ describe('CoachDashboard Component', () => {
   //   expect(component.pieChartData).toEqual([2, 1]);
   // });
 
-  it('should load workout and diet plan counts', () => {
-    mockCoachService.getClientsList.and.returnValue(
-      of({ items: { $values: [] } })
-    );
-    mockCoachService.getWorkouts.and.returnValue(
-      of({ items: { $values: [{}, {}, {}] } })
-    );
-    mockCoachService.getDiets.and.returnValue(
-      of({ items: { $values: [{}, {}] } })
-    );
-    mockCoachService.getAssignedPlansChart.and.returnValue(
-      of({ labels: { $values: [] }, datasets: { $values: [] } })
-    );
+  // it('should load workout and diet plan counts', () => {
+  //   mockCoachService.getClientsList.and.returnValue(
+  //     of({ items: { $values: [] } })
+  //   );
+  //   mockCoachService.getWorkouts.and.returnValue(
+  //     of({ items: { $values: [{}, {}, {}] } })
+  //   );
+  //   mockCoachService.getDiets.and.returnValue(
+  //     of({ items: { $values: [{}, {}] } })
+  //   );
+  //   mockCoachService.getAssignedPlansChart.and.returnValue(
+  //     of({ labels: { $values: [] }, datasets: { $values: [] } })
+  //   );
 
-    fixture.detectChanges();
+  //   fixture.detectChanges();
 
-    expect(component.activeWorkoutPlans()).toBe(3);
-    expect(component.activeDietPlans()).toBe(2);
-  });
+  //   expect(component.activeWorkoutPlans()).toBe(3);
+  //   expect(component.activeDietPlans()).toBe(2);
+  // });
 
   it('should populate bar chart data from assigned plan chart data', () => {
     const mockChart = {

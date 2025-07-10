@@ -34,11 +34,11 @@ export class CaochSidebar {
       icon: 'bi bi-eye-fill', // Changed to an "eye" icon for viewing
       label: 'View Diet Plans',
     },
-    {
-      to: '/chatCoach',
-      icon: 'bi bi-chat-fill', // Changed to an "eye" icon for viewing
-      label: 'Chat ',
-    },
+    // {
+    //   to: '/chatCoach',
+    //   icon: 'bi bi-chat-fill', // Changed to an "eye" icon for viewing
+    //   label: 'Chat ',
+    // },
   ];
 
   handleLogout() {

@@ -68,21 +68,21 @@ export class Viewprogress implements OnInit {
 
   setupCharts() {
     const images = this.proImages();
-    const labels = images.map((img) =>
-      new Date(img.uploadedAt).toLocaleDateString()
-    );
+    const labels = images
+      .map((img) => new Date(img.uploadedAt).toLocaleDateString())
+      .reverse();
 
     this.weightHeightChartData = {
       labels,
       datasets: [
         {
-          data: images.map((img) => img.weight),
+          data: images.map((img) => img.weight).reverse(),
           label: 'Weight (kg)',
           borderColor: 'blue',
           fill: false,
         },
         {
-          data: images.map((img) => img.height),
+          data: images.map((img) => img.height).reverse(),
           label: 'Height (cm)',
           borderColor: 'green',
           fill: false,

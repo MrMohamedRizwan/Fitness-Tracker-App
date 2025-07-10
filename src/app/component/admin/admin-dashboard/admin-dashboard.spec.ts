@@ -1,108 +1,149 @@
-// import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-// import { AdminDashboard } from './admin-dashboard';
-// import { UserService } from '../../../services/UserService';
-// import { Router } from '@angular/router';
-// import { ChangeDetectorRef } from '@angular/core';
-// import { of, throwError } from 'rxjs';
-// import { CommonModule } from '@angular/common';
+import {
+  ComponentFixture,
+  TestBed,
+  fakeAsync,
+  tick,
+} from '@angular/core/testing';
+import { AdminDashboard } from './admin-dashboard';
+import { UserService } from '../../../services/UserService';
+import { Router } from '@angular/router';
+import { of, throwError } from 'rxjs';
+import { Coach } from '../../../models/Coach';
+import { ChangeDetectorRef } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-// describe('AdminDashboard', () => {
-//   let component: AdminDashboard;
-//   let fixture: ComponentFixture<AdminDashboard>;
-//   let mockUserService: any;
-//   let mockRouter: any;
+describe('AdminDashboard', () => {
+  let component: AdminDashboard;
+  let fixture: ComponentFixture<AdminDashboard>;
 
-//   const mockCoachesResponse = {
-//     items: {
-//       $values: [
-//         {
-//           id: '65db16e6-8d40-43c9-93fe-c092b4915efd',
-//           name: 'james',
-//           yearsOfExperience: 32,
-//           email: 'james@gmail.com',
-//         },
-//         {
-//           id: 'fd41d56a-7db6-409b-860b-c1d0c6cf6caf',
-//           name: 'ChrisBumstead',
-//           yearsOfExperience: 45,
-//           email: 'cbum@gmail.com',
-//         },
-//         {
-//           id: '96c3b95a-418d-42d7-8728-b568a6573acf',
-//           name: 'Nandha Kumar',
-//           yearsOfExperience: 12,
-//           email: 'Nandhssakumar@gmail.com',
-//         },
-//       ],
-//     },
-//   };
+  const mockRouter = {
+    navigate: jasmine.createSpy('navigate'),
+  };
 
-//   beforeEach(waitForAsync(() => {
-//     mockUserService = jasmine.createSpyObj('UserService', [
-//       'getAllCoaches',
-//       'deleteCoach',
-//     ]);
-//     mockRouter = jasmine.createSpyObj('Router', ['navigate']);
+  const mockUserService = {
+    getAllCoaches: jasmine.createSpy('getAllCoaches'),
+    getAllClients: jasmine.createSpy('getAllClients'),
+    deleteCoach: jasmine.createSpy('deleteCoach'),
+    deleteClient: jasmine.createSpy('deleteClient'),
+  };
 
-//     TestBed.configureTestingModule({
-//       imports: [AdminDashboard],
-//       providers: [
-//         { provide: UserService, useValue: mockUserService },
-//         { provide: Router, useValue: mockRouter },
-//         ChangeDetectorRef,
-//       ],
-//     }).compileComponents();
-//   }));
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [AdminDashboard, CommonModule],
+      providers: [
+        { provide: UserService, useValue: mockUserService },
+        { provide: Router, useValue: mockRouter },
+        ChangeDetectorRef,
+      ],
+    }).compileComponents();
 
-//   beforeEach(() => {
-//     fixture = TestBed.createComponent(AdminDashboard);
-//     component = fixture.componentInstance;
-//     mockUserService.getAllCoaches.and.returnValue(of(mockCoachesResponse));
-//     fixture.detectChanges(); // triggers ngOnInit
-//   });
+    fixture = TestBed.createComponent(AdminDashboard);
+    component = fixture.componentInstance;
+  });
 
-//   it('should create the component', () => {
-//     expect(component).toBeTruthy();
-//   });
+  beforeEach(() => {
+    // Reset spies and return default mocks
+    mockUserService.getAllCoaches.calls.reset();
+    mockUserService.getAllClients.calls.reset();
+    mockUserService.deleteCoach.calls.reset();
+    mockUserService.deleteClient.calls.reset();
+  });
 
-//   it('should load coaches on init', () => {
-//     const coaches = component.coaches();
-//     expect(coaches.length).toBe(3);
-//     expect(coaches[1].name).toBe('ChrisBumstead');
-//   });
+  it('should create the component', () => {
+    expect(component).toBeTruthy();
+  });
 
-//   // it('should handle errors during coach loading', () => {
-//   //   mockUserService.getAllCoaches.and.returnValue(
-//   //     throwError(() => new Error('Load failed'))
-//   //   );
-//   //   component.loadCoaches();
-//   //   expect(component.coaches().length).toBe(0);
-//   // });
+  it('should call loadCoaches and loadClients on init', fakeAsync(() => {
+    mockUserService.getAllCoaches.and.returnValue(of({ $values: [] }));
+    mockUserService.getAllClients.and.returnValue(of({ $values: [] }));
 
-//   it('should navigate to coach details', () => {
-//     const coachId = 'fd41d56a-7db6-409b-860b-c1d0c6cf6caf';
-//     component.viewCoach(coachId);
-//     expect(mockRouter.navigate).toHaveBeenCalledWith(['/admin/coach', coachId]);
-//   });
+    fixture.detectChanges(); // triggers ngOnInit
+    tick();
 
-//   it('should confirm and call deleteCoach', () => {
-//     spyOn(window, 'confirm').and.returnValue(true);
-//     mockUserService.deleteCoach.and.returnValue(of({ message: 'deleted' }));
-//     spyOn(component['cdRef'], 'detectChanges');
+    expect(mockUserService.getAllCoaches).toHaveBeenCalled();
+    expect(mockUserService.getAllClients).toHaveBeenCalled();
+  }));
 
-//     const coachId = '65db16e6-8d40-43c9-93fe-c092b4915efd';
-//     component.deleteCoach(coachId);
+  it('should load coaches from service', fakeAsync(() => {
+    const mockCoaches: Coach[] = [{ id: '1', name: 'Coach A' } as Coach];
+    mockUserService.getAllCoaches.and.returnValue(of({ $values: mockCoaches }));
 
-//     expect(mockUserService.deleteCoach).toHaveBeenCalledWith(coachId);
-//     expect(component['cdRef'].detectChanges).toHaveBeenCalled();
-//   });
+    component.loadCoaches();
+    tick();
 
-//   it('should not call deleteCoach if confirmation is canceled', () => {
-//     spyOn(window, 'confirm').and.returnValue(false);
+    expect(component.coaches()).toEqual(mockCoaches);
+  }));
 
-//     const coachId = 'some-id';
-//     component.deleteCoach(coachId);
+  it('should load clients from service', fakeAsync(() => {
+    const mockClients = [{ id: 'c1', name: 'Client A' }];
+    mockUserService.getAllClients.and.returnValue(of({ $values: mockClients }));
 
-//     expect(mockUserService.deleteCoach).not.toHaveBeenCalled();
-//   });
-// });
+    component.loadClients();
+    tick();
+
+    expect(component.clients()).toEqual(mockClients);
+  }));
+
+  it('should call deleteCoach if confirmed', fakeAsync(() => {
+    spyOn(window, 'confirm').and.returnValue(true);
+    mockUserService.deleteCoach.and.returnValue(of({}));
+
+    component.deleteCoach('1');
+    tick();
+
+    expect(mockUserService.deleteCoach).toHaveBeenCalledWith('1');
+  }));
+
+  it('should not call deleteCoach if confirm is cancelled', () => {
+    spyOn(window, 'confirm').and.returnValue(false);
+
+    component.deleteCoach('1');
+
+    expect(mockUserService.deleteCoach).not.toHaveBeenCalled();
+  });
+
+  it('should call deleteClient if confirmed', fakeAsync(() => {
+    spyOn(window, 'confirm').and.returnValue(true);
+    mockUserService.deleteClient.and.returnValue(of({}));
+
+    component.deleteClient('c1');
+    tick();
+
+    expect(mockUserService.deleteClient).toHaveBeenCalledWith('c1');
+  }));
+
+  it('should navigate to coach view page', () => {
+    component.viewCoach('123');
+    expect(mockRouter.navigate).toHaveBeenCalledWith(['/admin/coach', '123']);
+  });
+
+  it('should handle loadCoaches error', fakeAsync(() => {
+    spyOn(console, 'error');
+    mockUserService.getAllCoaches.and.returnValue(
+      throwError(() => 'Load Error')
+    );
+
+    component.loadCoaches();
+    tick();
+
+    expect(console.error).toHaveBeenCalledWith(
+      '❌ Failed to load coaches:',
+      'Load Error'
+    );
+  }));
+
+  it('should handle loadClients error', fakeAsync(() => {
+    spyOn(console, 'error');
+    mockUserService.getAllClients.and.returnValue(
+      throwError(() => 'Client Error')
+    );
+
+    component.loadClients();
+    tick();
+
+    expect(console.error).toHaveBeenCalledWith(
+      '❌ Failed to load coaches:',
+      'Client Error'
+    );
+  }));
+});

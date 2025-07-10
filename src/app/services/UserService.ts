@@ -35,7 +35,7 @@ export class UserService {
             } else if (role == 'Client') {
               this.router.navigate(['/client-dashboard']);
             } else {
-              this.router.navigate(['/admin-dashboard']);
+              this.router.navigate(['/coaches']);
             }
 
             observer.next(true);

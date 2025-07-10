@@ -200,8 +200,10 @@
                 class="badge"
                 [ngClass]="{
                   'bg-success': user.status === 'Completed',
-                  'bg-warning': user.status === 'Not Completed',
-                  'bg-danger': user.status === 'inactive'
+                    'bg-use': user.status === 'Not Completed',
+                    'bg-secondary': user.status === 'Not Started',
+                  'bg-danger': user.status === 'inactive',
+                  'bg-warning': user.status === 'On Progress',
                 }"
               >
                 {{ user.status }}

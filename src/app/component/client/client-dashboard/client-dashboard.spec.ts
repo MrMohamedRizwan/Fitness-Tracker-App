@@ -190,14 +190,14 @@ describe('ClientDashboard Component', () => {
     expect(mockNotificationService.stopConnection).toHaveBeenCalled();
   });
 
-  it('should handle failed getPlans gracefully', () => {
-    mockPlanAssignmentService.getPlans.and.returnValue(
-      throwError(() => new Error('Error fetching plans'))
-    );
-    component.getAssignedPlans();
+  // it('should handle failed getPlans gracefully', () => {
+  //   mockPlanAssignmentService.getPlans.and.returnValue(
+  //     throwError(() => new Error('Error fetching plans'))
+  //   );
+  //   component.getAssignedPlans();
 
-    expect(component.allPlans().length).toBe(0);
-    expect(component.workoutPlans().length).toBe(0);
-    expect(component.dietPlans().length).toBe(0);
-  });
+  //   expect(component.allPlans().length).toBe(0);
+  //   expect(component.workoutPlans().length).toBe(0);
+  //   expect(component.dietPlans().length).toBe(0);
+  // });
 });

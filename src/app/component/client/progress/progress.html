@@ -56,11 +56,11 @@
           />
           <div
             class="text-danger small mt-1"
-            *ngIf="heightData.length && height < heightData[heightData.length - 1] && heightInput.touched"
+            *ngIf="heightData.length && height < heightData[0] && heightInput.touched"
           >
             <i class="bi bi-exclamation-circle-fill"></i>
             Height must be greater than or equal to your previous entry ({{
-            heightData[heightData.length - 1] }} cm).
+            heightData[0] }} cm).
           </div>
         </div>
         <div class="col-md-6">

@@ -28,6 +28,7 @@ import { AdminDashboard } from './component/admin/admin-dashboard/admin-dashboar
 import { Toasssss } from './toasssss/toasssss';
 import { ChatComponent } from './chat-component/chat-component';
 import { ChatCoach } from './component/coah/chat-coach/chat-coach';
+import { Adminlayout } from './component/admin/adminlayout/adminlayout';
 
 export const routes: Routes = [
   { path: 'notification', component: Notification },
@@ -84,10 +85,14 @@ export const routes: Routes = [
     ],
   },
   {
-    path: 'admin-dashboard',
-    component: AdminDashboard,
+    path: '',
+    component: Adminlayout,
     canActivate: [AuthGuard],
     data: { roles: ['Admin'] },
+    children: [
+      { path: 'coaches', component: AdminDashboard },
+      { path: 'clients', component: AdminDashboard },
+    ],
   },
   { path: 'unauthorized', component: Unauthorized },
 ];

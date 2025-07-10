@@ -37,6 +37,17 @@ export class Quotes implements OnInit {
     'The difference between try and triumph is a little ‘umph’!',
     'Fitness is like a relationship. You can’t cheat and expect it to work.',
     'Fall in love with taking care of yourself.',
+    // Added quotes
+    'Small steps every day lead to big results.',
+    'Motivation gets you started, habit keeps you going.',
+    'Don’t stop until you’re proud.',
+    'Energy and persistence conquer all things.',
+    'The pain you feel today will be the strength you feel tomorrow.',
+    'Be stronger than your strongest excuse.',
+    'You are one workout away from a good mood.',
+    'Champions keep playing until they get it right.',
+    'The hardest lift of all is lifting your butt off the couch.',
+    'Dream big. Work hard. Stay focused.',
   ];
 
   selectedQuote: string = '';

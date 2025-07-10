@@ -107,7 +107,7 @@ export class Progress implements OnInit {
     if (!this.selectedFile || this.height <= 0 || this.weight <= 0)
       return false;
     if (this.heightData.length > 0) {
-      const lastHeight = this.heightData[this.heightData.length - 1];
+      const lastHeight = this.heightData[0];
       if (this.height < lastHeight) return false;
     }
     return true;

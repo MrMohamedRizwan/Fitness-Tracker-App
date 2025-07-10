@@ -57,7 +57,7 @@
 
   <div *ngIf="client() as c" class="container mt-4">
     <div class="text-center mb-4">
-      <h3>{{ c.name }}'s Progress hdaubuhbah</h3>
+      <h3>{{ c.name }}'s Progress</h3>
       <p>{{ c.email }}</p>
     </div>
     <div class="row justify-content-center">
@@ -119,7 +119,7 @@
 
                 <button
                   class="btn btn-outline-danger btn-sm"
-                  (click)="cancelPlan(plan.id, 'workout')"
+                  (click)="cancelPlan(plan.planAssignmentId, 'workout')"
                   title="Cancel Plan"
                 >
                   Cancel
@@ -202,7 +202,7 @@
                 </button>
                 <button
                   class="btn btn-outline-danger btn-sm"
-                  (click)="cancelPlan(plan.id, 'diet')"
+                  (click)="cancelPlan(plan.planAssignmentId, 'diet')"
                   title="Cancel Plan"
                 >
                   Cancel

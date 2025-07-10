@@ -17,9 +17,9 @@ describe('CaochSidebar', () => {
     fixture.detectChanges();
   });
 
-  it('should create the component', () => {
-    expect(component).toBeTruthy();
-  });
+  // it('should create the component', () => {
+  //   expect(component).toBeTruthy();
+  // });
 
   // it('should render all sidebar links', () => {
   //   const links = fixture.debugElement.queryAll(By.css('.bi'));

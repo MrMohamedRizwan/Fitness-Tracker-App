@@ -17,6 +17,19 @@ export class CoachService {
     return this.http.get<any>(url, { headers });
   }
 
+  public deleteAssignedPlans(id: any): Observable<any> {
+    const token = this.getToken();
+    return this.http.delete(
+      `http://localhost:5002/api/v1/Coach/Delete-Assigned-Plans/${id}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+      }
+    );
+  }
+
   public getDiets(): Observable<any> {
     const token = localStorage.getItem('user')
       ? JSON.parse(localStorage.getItem('user')!).token

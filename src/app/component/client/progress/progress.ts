@@ -56,8 +56,7 @@ export class Progress implements OnInit {
   loadProgressData() {
     this.progressService.getAllProgress().subscribe((res) => {
       this.progressList = res?.$values || [];
-      this.lastUploadedDate =
-        this.progressList[this.progressList.length - 1].uploadedAt;
+      this.lastUploadedDate = this.progressList[0].uploadedAt;
 
       this.lineChartLabels = this.progressList.map((p) =>
         new Date(p.uploadedAt).toLocaleDateString()
@@ -84,7 +83,7 @@ export class Progress implements OnInit {
     const diffTime = today.getTime() - lastDate.getTime();
     const diffDays = diffTime / (1000 * 3600 * 24);
 
-    return diffDays > 5;
+    return diffDays > 0;
   }
 
   onFileSelected(event: any) {

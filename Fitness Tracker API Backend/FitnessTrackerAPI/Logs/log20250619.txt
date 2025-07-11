@@ -1,0 +1,189 @@
+2025-06-19 23:01:37.497 +05:30 [INF] User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-19 23:01:37.656 +05:30 [INF] Now listening on: http://localhost:5002
+2025-06-19 23:01:37.657 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-19 23:01:37.657 +05:30 [INF] Hosting environment: Development
+2025-06-19 23:01:37.657 +05:30 [INF] Content root path: /Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI
+2025-06-19 23:01:57.102 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5002/api/v1/Authentication - application/json 59
+2025-06-19 23:01:57.163 +05:30 [INF] API Call: POST /api/v1/Authentication by anonymous at "2025-06-19T17:31:57.1613270Z"
+2025-06-19 23:01:57.213 +05:30 [INF] Executing endpoint 'FitnessTrackerAPI.Controllers.AuthenticationController.PostClient (FitnessTrackerAPI)'
+2025-06-19 23:01:57.234 +05:30 [INF] Route matched with {action = "PostClient", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[FitnessTrackerAPI.Models.DTOs.UserLoginResponse]] PostClient(FitnessTrackerAPI.Models.DTOs.UserLoginRequest) on controller FitnessTrackerAPI.Controllers.AuthenticationController (FitnessTrackerAPI).
+2025-06-19 23:01:58.771 +05:30 [INF] Executed DbCommand (56ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Email", u."HashKey", u."Password", u."RefreshToken", u."RefreshTokenExpiryTime", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__key_0
+LIMIT 2
+2025-06-19 23:01:59.205 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."Email", c."Name", c."Phone", c."YearsOfExperience"
+FROM "Coach" AS c
+2025-06-19 23:01:59.277 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Email", u."HashKey", u."Password", u."RefreshToken", u."RefreshTokenExpiryTime", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__key_0
+LIMIT 2
+2025-06-19 23:01:59.379 +05:30 [INF] Executed DbCommand (15ms) [Parameters=[@p2='?', @p0='?', @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "RefreshToken" = @p0, "RefreshTokenExpiryTime" = @p1
+WHERE "Email" = @p2;
+2025-06-19 23:01:59.398 +05:30 [INF] Executing OkObjectResult, writing value of type 'FitnessTrackerAPI.Models.DTOs.UserLoginResponse'.
+2025-06-19 23:01:59.414 +05:30 [INF] Executed action FitnessTrackerAPI.Controllers.AuthenticationController.PostClient (FitnessTrackerAPI) in 2175.583ms
+2025-06-19 23:01:59.420 +05:30 [INF] Executed endpoint 'FitnessTrackerAPI.Controllers.AuthenticationController.PostClient (FitnessTrackerAPI)'
+2025-06-19 23:01:59.432 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5002/api/v1/Authentication - 200 null application/json; charset=utf-8 2332.6355ms
+2025-06-19 23:02:50.847 +05:30 [INF] Application is shutting down...
+2025-06-19 23:03:27.417 +05:30 [INF] User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-19 23:03:27.545 +05:30 [INF] Now listening on: http://localhost:5002
+2025-06-19 23:03:27.546 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-19 23:03:27.546 +05:30 [INF] Hosting environment: Development
+2025-06-19 23:03:27.546 +05:30 [INF] Content root path: /Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI
+2025-06-19 23:13:15.245 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5002/api/v1/Authentication - null null
+2025-06-19 23:13:15.310 +05:30 [INF] CORS policy execution failed.
+2025-06-19 23:13:15.310 +05:30 [INF] Request origin http://localhost:4200 does not have permission to access the resource.
+2025-06-19 23:13:15.315 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5002/api/v1/Authentication - 204 null null 73.5715ms
+2025-06-19 23:13:58.911 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5002/api/v1/Authentication - null null
+2025-06-19 23:13:58.914 +05:30 [INF] CORS policy execution failed.
+2025-06-19 23:13:58.915 +05:30 [INF] Request origin http://localhost:4200 does not have permission to access the resource.
+2025-06-19 23:13:58.915 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5002/api/v1/Authentication - 204 null null 4.7986ms
+2025-06-19 23:14:21.541 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5002/api/v1/Authentication - null null
+2025-06-19 23:14:21.543 +05:30 [INF] CORS policy execution failed.
+2025-06-19 23:14:21.543 +05:30 [INF] Request origin http://localhost:4200 does not have permission to access the resource.
+2025-06-19 23:14:21.543 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5002/api/v1/Authentication - 204 null null 2.2828ms
+2025-06-19 23:15:48.863 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5002/api/v1/Authentication - application/json 59
+2025-06-19 23:15:48.878 +05:30 [INF] API Call: POST /api/v1/Authentication by anonymous at "2025-06-19T17:45:48.8761060Z"
+2025-06-19 23:15:48.934 +05:30 [INF] Executing endpoint 'FitnessTrackerAPI.Controllers.AuthenticationController.PostClient (FitnessTrackerAPI)'
+2025-06-19 23:15:48.957 +05:30 [INF] Route matched with {action = "PostClient", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[FitnessTrackerAPI.Models.DTOs.UserLoginResponse]] PostClient(FitnessTrackerAPI.Models.DTOs.UserLoginRequest) on controller FitnessTrackerAPI.Controllers.AuthenticationController (FitnessTrackerAPI).
+2025-06-19 23:15:50.585 +05:30 [INF] Executed DbCommand (66ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Email", u."HashKey", u."Password", u."RefreshToken", u."RefreshTokenExpiryTime", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__key_0
+LIMIT 2
+2025-06-19 23:15:51.000 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."Email", c."Name", c."Phone", c."YearsOfExperience"
+FROM "Coach" AS c
+2025-06-19 23:15:51.070 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Email", u."HashKey", u."Password", u."RefreshToken", u."RefreshTokenExpiryTime", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__key_0
+LIMIT 2
+2025-06-19 23:15:51.173 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[@p2='?', @p0='?', @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "RefreshToken" = @p0, "RefreshTokenExpiryTime" = @p1
+WHERE "Email" = @p2;
+2025-06-19 23:15:51.194 +05:30 [INF] Executing OkObjectResult, writing value of type 'FitnessTrackerAPI.Models.DTOs.UserLoginResponse'.
+2025-06-19 23:15:51.207 +05:30 [INF] Executed action FitnessTrackerAPI.Controllers.AuthenticationController.PostClient (FitnessTrackerAPI) in 2244.7304ms
+2025-06-19 23:15:51.207 +05:30 [INF] Executed endpoint 'FitnessTrackerAPI.Controllers.AuthenticationController.PostClient (FitnessTrackerAPI)'
+2025-06-19 23:15:51.219 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5002/api/v1/Authentication - 200 null application/json; charset=utf-8 2355.8528ms
+2025-06-19 23:16:03.148 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5002/api/v1/Authentication - null null
+2025-06-19 23:16:03.149 +05:30 [INF] CORS policy execution failed.
+2025-06-19 23:16:03.149 +05:30 [INF] Request origin http://localhost:4200 does not have permission to access the resource.
+2025-06-19 23:16:03.150 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5002/api/v1/Authentication - 204 null null 1.5512ms
+2025-06-19 23:16:34.036 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5002/api/v1/Authentication - null null
+2025-06-19 23:16:34.037 +05:30 [INF] CORS policy execution failed.
+2025-06-19 23:16:34.038 +05:30 [INF] Request origin http://localhost:4200 does not have permission to access the resource.
+2025-06-19 23:16:34.038 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5002/api/v1/Authentication - 204 null null 1.5346ms
+2025-06-19 23:17:12.747 +05:30 [INF] Application is shutting down...
+2025-06-19 23:17:38.629 +05:30 [INF] User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-19 23:17:38.756 +05:30 [INF] Now listening on: http://localhost:5002
+2025-06-19 23:17:38.757 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-19 23:17:38.757 +05:30 [INF] Hosting environment: Development
+2025-06-19 23:17:38.758 +05:30 [INF] Content root path: /Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI
+2025-06-19 23:18:22.553 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5002/api/v1/Authentication - null null
+2025-06-19 23:18:22.612 +05:30 [INF] CORS policy execution failed.
+2025-06-19 23:18:22.613 +05:30 [INF] Request origin http://localhost:4200 does not have permission to access the resource.
+2025-06-19 23:18:22.618 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5002/api/v1/Authentication - 204 null null 68.5443ms
+2025-06-19 23:19:16.133 +05:30 [INF] Application is shutting down...
+2025-06-19 23:19:46.465 +05:30 [INF] User profile is available. Using '/Users/presidio/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2025-06-19 23:19:46.636 +05:30 [INF] Now listening on: http://localhost:5002
+2025-06-19 23:19:46.637 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-19 23:19:46.637 +05:30 [INF] Hosting environment: Development
+2025-06-19 23:19:46.637 +05:30 [INF] Content root path: /Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI
+2025-06-19 23:19:51.616 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5002/api/v1/Authentication - null null
+2025-06-19 23:19:51.664 +05:30 [INF] CORS policy execution successful.
+2025-06-19 23:19:51.670 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5002/api/v1/Authentication - 204 null null 56.6605ms
+2025-06-19 23:19:51.688 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5002/api/v1/Authentication - application/json 36
+2025-06-19 23:19:51.697 +05:30 [INF] CORS policy execution successful.
+2025-06-19 23:19:51.701 +05:30 [INF] API Call: POST /api/v1/Authentication by anonymous at "2025-06-19T17:49:51.6998150Z"
+2025-06-19 23:19:51.748 +05:30 [INF] Executing endpoint 'FitnessTrackerAPI.Controllers.AuthenticationController.PostClient (FitnessTrackerAPI)'
+2025-06-19 23:19:51.764 +05:30 [INF] Route matched with {action = "PostClient", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[FitnessTrackerAPI.Models.DTOs.UserLoginResponse]] PostClient(FitnessTrackerAPI.Models.DTOs.UserLoginRequest) on controller FitnessTrackerAPI.Controllers.AuthenticationController (FitnessTrackerAPI).
+2025-06-19 23:19:51.951 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-06-19 23:19:51.982 +05:30 [INF] Executed action FitnessTrackerAPI.Controllers.AuthenticationController.PostClient (FitnessTrackerAPI) in 214.7009ms
+2025-06-19 23:19:51.983 +05:30 [INF] Executed endpoint 'FitnessTrackerAPI.Controllers.AuthenticationController.PostClient (FitnessTrackerAPI)'
+2025-06-19 23:19:51.985 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5002/api/v1/Authentication - 400 null application/problem+json; charset=utf-8 297.3967ms
+2025-06-19 23:20:02.885 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5002/api/v1/Authentication - null null
+2025-06-19 23:20:02.887 +05:30 [INF] CORS policy execution successful.
+2025-06-19 23:20:02.887 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5002/api/v1/Authentication - 204 null null 1.5918ms
+2025-06-19 23:20:02.888 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5002/api/v1/Authentication - application/json 36
+2025-06-19 23:20:02.889 +05:30 [INF] CORS policy execution successful.
+2025-06-19 23:20:02.889 +05:30 [INF] API Call: POST /api/v1/Authentication by anonymous at "2025-06-19T17:50:02.8895460Z"
+2025-06-19 23:20:02.891 +05:30 [INF] Executing endpoint 'FitnessTrackerAPI.Controllers.AuthenticationController.PostClient (FitnessTrackerAPI)'
+2025-06-19 23:20:02.893 +05:30 [INF] Route matched with {action = "PostClient", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[FitnessTrackerAPI.Models.DTOs.UserLoginResponse]] PostClient(FitnessTrackerAPI.Models.DTOs.UserLoginRequest) on controller FitnessTrackerAPI.Controllers.AuthenticationController (FitnessTrackerAPI).
+2025-06-19 23:20:02.903 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-06-19 23:20:02.904 +05:30 [INF] Executed action FitnessTrackerAPI.Controllers.AuthenticationController.PostClient (FitnessTrackerAPI) in 10.6824ms
+2025-06-19 23:20:02.904 +05:30 [INF] Executed endpoint 'FitnessTrackerAPI.Controllers.AuthenticationController.PostClient (FitnessTrackerAPI)'
+2025-06-19 23:20:02.904 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5002/api/v1/Authentication - 400 null application/problem+json; charset=utf-8 15.8963ms
+2025-06-19 23:20:22.340 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5002/api/v1/Authentication - null null
+2025-06-19 23:20:22.341 +05:30 [INF] CORS policy execution successful.
+2025-06-19 23:20:22.341 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5002/api/v1/Authentication - 204 null null 0.7504ms
+2025-06-19 23:20:22.342 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5002/api/v1/Authentication - application/json 50
+2025-06-19 23:20:22.343 +05:30 [INF] CORS policy execution successful.
+2025-06-19 23:20:22.343 +05:30 [INF] API Call: POST /api/v1/Authentication by anonymous at "2025-06-19T17:50:22.3432110Z"
+2025-06-19 23:20:22.346 +05:30 [INF] Executing endpoint 'FitnessTrackerAPI.Controllers.AuthenticationController.PostClient (FitnessTrackerAPI)'
+2025-06-19 23:20:22.346 +05:30 [INF] Route matched with {action = "PostClient", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[FitnessTrackerAPI.Models.DTOs.UserLoginResponse]] PostClient(FitnessTrackerAPI.Models.DTOs.UserLoginRequest) on controller FitnessTrackerAPI.Controllers.AuthenticationController (FitnessTrackerAPI).
+2025-06-19 23:20:23.449 +05:30 [INF] Executed DbCommand (46ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Email", u."HashKey", u."Password", u."RefreshToken", u."RefreshTokenExpiryTime", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__key_0
+LIMIT 2
+2025-06-19 23:20:23.833 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."Email", c."Name", c."Phone", c."YearsOfExperience"
+FROM "Coach" AS c
+2025-06-19 23:20:23.890 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Email", u."HashKey", u."Password", u."RefreshToken", u."RefreshTokenExpiryTime", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__key_0
+LIMIT 2
+2025-06-19 23:20:23.968 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@p2='?', @p0='?', @p1='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "RefreshToken" = @p0, "RefreshTokenExpiryTime" = @p1
+WHERE "Email" = @p2;
+2025-06-19 23:20:23.980 +05:30 [INF] Executing OkObjectResult, writing value of type 'FitnessTrackerAPI.Models.DTOs.UserLoginResponse'.
+2025-06-19 23:20:23.986 +05:30 [INF] Executed action FitnessTrackerAPI.Controllers.AuthenticationController.PostClient (FitnessTrackerAPI) in 1640.2961ms
+2025-06-19 23:20:23.987 +05:30 [INF] Executed endpoint 'FitnessTrackerAPI.Controllers.AuthenticationController.PostClient (FitnessTrackerAPI)'
+2025-06-19 23:20:23.996 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5002/api/v1/Authentication - 200 null application/json; charset=utf-8 1653.4447ms
+2025-06-19 23:23:00.093 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5002/api/v1/Authentication - null null
+2025-06-19 23:23:00.094 +05:30 [INF] CORS policy execution successful.
+2025-06-19 23:23:00.094 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5002/api/v1/Authentication - 204 null null 1.5342ms
+2025-06-19 23:23:00.096 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5002/api/v1/Authentication - application/json 36
+2025-06-19 23:23:00.097 +05:30 [INF] CORS policy execution successful.
+2025-06-19 23:23:00.097 +05:30 [INF] API Call: POST /api/v1/Authentication by anonymous at "2025-06-19T17:53:00.0973630Z"
+2025-06-19 23:23:00.097 +05:30 [INF] Executing endpoint 'FitnessTrackerAPI.Controllers.AuthenticationController.PostClient (FitnessTrackerAPI)'
+2025-06-19 23:23:00.098 +05:30 [INF] Route matched with {action = "PostClient", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[FitnessTrackerAPI.Models.DTOs.UserLoginResponse]] PostClient(FitnessTrackerAPI.Models.DTOs.UserLoginRequest) on controller FitnessTrackerAPI.Controllers.AuthenticationController (FitnessTrackerAPI).
+2025-06-19 23:23:00.100 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-06-19 23:23:00.100 +05:30 [INF] Executed action FitnessTrackerAPI.Controllers.AuthenticationController.PostClient (FitnessTrackerAPI) in 2.2787ms
+2025-06-19 23:23:00.100 +05:30 [INF] Executed endpoint 'FitnessTrackerAPI.Controllers.AuthenticationController.PostClient (FitnessTrackerAPI)'
+2025-06-19 23:23:00.100 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5002/api/v1/Authentication - 400 null application/problem+json; charset=utf-8 4.4171ms
+2025-06-19 23:24:50.874 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5002/api/v1/Authentication - null null
+2025-06-19 23:24:50.874 +05:30 [INF] CORS policy execution successful.
+2025-06-19 23:24:50.875 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5002/api/v1/Authentication - 204 null null 0.8393ms
+2025-06-19 23:24:50.876 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5002/api/v1/Authentication - application/json 36
+2025-06-19 23:24:50.877 +05:30 [INF] CORS policy execution successful.
+2025-06-19 23:24:50.877 +05:30 [INF] API Call: POST /api/v1/Authentication by anonymous at "2025-06-19T17:54:50.8775690Z"
+2025-06-19 23:24:50.878 +05:30 [INF] Executing endpoint 'FitnessTrackerAPI.Controllers.AuthenticationController.PostClient (FitnessTrackerAPI)'
+2025-06-19 23:24:50.878 +05:30 [INF] Route matched with {action = "PostClient", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[FitnessTrackerAPI.Models.DTOs.UserLoginResponse]] PostClient(FitnessTrackerAPI.Models.DTOs.UserLoginRequest) on controller FitnessTrackerAPI.Controllers.AuthenticationController (FitnessTrackerAPI).
+2025-06-19 23:24:50.879 +05:30 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-06-19 23:24:50.880 +05:30 [INF] Executed action FitnessTrackerAPI.Controllers.AuthenticationController.PostClient (FitnessTrackerAPI) in 1.9634ms
+2025-06-19 23:24:50.880 +05:30 [INF] Executed endpoint 'FitnessTrackerAPI.Controllers.AuthenticationController.PostClient (FitnessTrackerAPI)'
+2025-06-19 23:24:50.881 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5002/api/v1/Authentication - 400 null application/problem+json; charset=utf-8 4.172ms
+2025-06-19 23:25:44.776 +05:30 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5002/api/v1/Authentication - null null
+2025-06-19 23:25:44.776 +05:30 [INF] CORS policy execution successful.
+2025-06-19 23:25:44.776 +05:30 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5002/api/v1/Authentication - 204 null null 0.3925ms
+2025-06-19 23:25:44.777 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5002/api/v1/Authentication - application/json 42
+2025-06-19 23:25:44.778 +05:30 [INF] CORS policy execution successful.
+2025-06-19 23:25:44.778 +05:30 [INF] API Call: POST /api/v1/Authentication by anonymous at "2025-06-19T17:55:44.7781010Z"
+2025-06-19 23:25:44.778 +05:30 [INF] Executing endpoint 'FitnessTrackerAPI.Controllers.AuthenticationController.PostClient (FitnessTrackerAPI)'
+2025-06-19 23:25:44.778 +05:30 [INF] Route matched with {action = "PostClient", controller = "Authentication"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[FitnessTrackerAPI.Models.DTOs.UserLoginResponse]] PostClient(FitnessTrackerAPI.Models.DTOs.UserLoginRequest) on controller FitnessTrackerAPI.Controllers.AuthenticationController (FitnessTrackerAPI).
+2025-06-19 23:25:44.869 +05:30 [INF] Executed DbCommand (3ms) [Parameters=[@__key_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Email", u."HashKey", u."Password", u."RefreshToken", u."RefreshTokenExpiryTime", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__key_0
+LIMIT 2
+2025-06-19 23:25:44.872 +05:30 [INF] Executing ObjectResult, writing value of type 'FitnessTrackerAPI.Models.DTOs.ErrorObjectDTO'.
+2025-06-19 23:25:44.875 +05:30 [INF] Executed action FitnessTrackerAPI.Controllers.AuthenticationController.PostClient (FitnessTrackerAPI) in 96.7478ms
+2025-06-19 23:25:44.875 +05:30 [INF] Executed endpoint 'FitnessTrackerAPI.Controllers.AuthenticationController.PostClient (FitnessTrackerAPI)'
+2025-06-19 23:25:44.875 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5002/api/v1/Authentication - 500 null application/json; charset=utf-8 98.119ms
+2025-06-19 23:26:15.534 +05:30 [INF] Application is shutting down...

@@ -52,7 +52,7 @@
   </div>
 
   <!-- Section: Clients -->
-  <div>
+  <!-- <div>
     <h4 class="text-secondary mb-3">
       <i class="bi bi-people-fill me-2"></i>All Clients
     </h4>
@@ -69,6 +69,10 @@
               <i class="bi bi-person-lines-fill me-2 fs-4 text-success"></i>
               {{ client.name }}
             </h5>
+            <span *ngIf="client.isActive" class="badge bg-success">Active</span>
+            <span *ngIf="!client.isActive" class="badge bg-secondary"
+              >Inactive</span
+            >
             <p class="card-text text-muted mb-1">
               <strong>Email:</strong> {{ client.email }}
             </p>
@@ -82,12 +86,6 @@
           <div
             class="card-footer bg-white border-top-0 d-flex justify-content-end gap-2"
           >
-            <!-- <button
-              class="btn btn-outline-primary btn-sm"
-              (click)="viewClient(client.id)"
-            >
-              <i class="bi bi-eye"></i> View
-            </button> -->
             <button
               class="btn btn-outline-danger btn-sm"
               (click)="deleteClient(client.id)"
@@ -98,5 +96,5 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>

@@ -1,0 +1,57 @@
+<!-- Comparison Card -->
+<div *ngIf="showComparison && !showGallery" class="card shadow-sm border-0 mt-4">
+  <div class="card-header fw-bold d-flex justify-content-between align-items-center">
+    📸 {{ selectedGrouping | titlecase }} Progress Comparison
+
+    <select class="form-select w-auto"
+            [(ngModel)]="selectedGrouping"
+            (change)="groupImagesByTimeFrame(selectedGrouping)">
+      <option value="weekly">Weekly</option>
+      <option value="monthly">Monthly</option>
+    </select>
+  </div>
+
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let img of groupedImages">
+        <div class="card h-100 border">
+          <img
+            [src]="'https://fitnessdbbucket.s3.ap-south-1.amazonaws.com/' + img.imagePath"
+            class="card-img-top"
+            alt="Progress"
+            style="object-fit: contain; height: 250px"
+          />
+          <div class="card-body">
+            <h6 class="card-title">{{ img.uploadedAt | date: 'mediumDate' }}</h6>
+            <p class="mb-1"><span class="badge bg-light text-dark border">Weight: {{ img.weight }} kg</span></p>
+            <p><span class="badge bg-light text-dark border">Height: {{ img.height }} cm</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Gallery -->
+<div *ngIf="showGallery && !showComparison" class="card shadow-sm border-0 mt-5">
+  <div class="card-header fw-bold">🖼️ Progress Photo Gallery</div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let img of proImages">
+        <div class="card h-100 border">
+          <img
+            [src]="'https://fitnessdbbucket.s3.ap-south-1.amazonaws.com/' + img.imagePath"
+            class="card-img-top"
+            alt="Progress"
+            style="object-fit: contain; height: 250px"
+          />
+          <div class="card-body">
+            <h6 class="card-title">{{ img.uploadedAt | date: 'mediumDate' }}</h6>
+            <p class="mb-1"><span class="badge bg-light text-dark border">Weight: {{ img.weight }} kg</span></p>
+            <p><span class="badge bg-light text-dark border">Height: {{ img.height }} cm</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

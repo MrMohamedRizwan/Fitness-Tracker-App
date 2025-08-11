@@ -1,0 +1,685 @@
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/appsettings.Development.json
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/appsettings.json
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/FitnessTrackerAPI.staticwebassets.endpoints.json
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/FitnessTrackerAPI
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/FitnessTrackerAPI.deps.json
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/FitnessTrackerAPI.runtimeconfig.json
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/FitnessTrackerAPI.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/FitnessTrackerAPI.pdb
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/AutoMapper.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/AWSSDK.Core.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/AWSSDK.Extensions.NETCore.Setup.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/AWSSDK.S3.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/BCrypt.Net-Next.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Google.Apis.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Google.Apis.Auth.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Google.Apis.Core.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Humanizer.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/log4net.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.Google.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.AspNetCore.Mvc.Versioning.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.AspNetCore.OpenApi.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Bcl.AsyncInterfaces.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Build.Locator.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.CSharp.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Caching.Abstractions.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Caching.Memory.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.DependencyModel.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Logging.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Options.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Logging.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.OpenApi.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Mono.TextTemplating.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Newtonsoft.Json.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Npgsql.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.AspNetCore.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Extensions.Hosting.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Extensions.Logging.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Formatting.Compact.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Settings.Configuration.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Sinks.Async.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Sinks.Console.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Sinks.Debug.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Sinks.File.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/System.CodeDom.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/System.Composition.AttributedModel.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/System.Composition.Convention.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/System.Composition.Hosting.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/System.Composition.Runtime.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/System.Composition.TypedParts.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/System.Configuration.ConfigurationManager.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/System.Management.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/System.Net.WebSockets.WebSocketProtocol.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/System.Security.Cryptography.ProtectedData.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/System.Security.Permissions.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/runtimes/win/lib/net7.0/System.Management.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/bin/Debug/net9.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.csproj.AssemblyReference.cache
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.GeneratedMSBuildEditorConfig.editorconfig
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.AssemblyInfoInputs.cache
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.AssemblyInfo.cs
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.csproj.CoreCompileInputs.cache
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.MvcApplicationPartsAssemblyInfo.cs
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.MvcApplicationPartsAssemblyInfo.cache
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.sourcelink.json
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/obj/Debug/net9.0/scopedcss/bundle/FitnessTrackerAPI.styles.css
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/obj/Debug/net9.0/staticwebassets.build.json
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/obj/Debug/net9.0/staticwebassets.build.json.cache
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/obj/Debug/net9.0/staticwebassets.development.json
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/obj/Debug/net9.0/staticwebassets.build.endpoints.json
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/obj/Debug/net9.0/FitnessT.EB8829A0.Up2Date
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/obj/Debug/net9.0/refint/FitnessTrackerAPI.dll
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.pdb
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.genruntimeconfig.cache
+/Users/presidio/Desktop/Genspark/GensparkTraining/Day 25 06-06-2025/FitnessTrackerAPI/obj/Debug/net9.0/ref/FitnessTrackerAPI.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/appsettings.Development.json
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/appsettings.json
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/FitnessTrackerAPI.staticwebassets.endpoints.json
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/FitnessTrackerAPI
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/FitnessTrackerAPI.deps.json
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/FitnessTrackerAPI.runtimeconfig.json
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/FitnessTrackerAPI.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/FitnessTrackerAPI.pdb
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/AutoMapper.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/AWSSDK.Core.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/AWSSDK.Extensions.NETCore.Setup.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/AWSSDK.S3.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/AWSSDK.SimpleEmail.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/BCrypt.Net-Next.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Google.Apis.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Google.Apis.Auth.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Google.Apis.Core.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Humanizer.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/log4net.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.Google.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.AspNetCore.Mvc.Versioning.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.AspNetCore.OpenApi.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Bcl.AsyncInterfaces.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Build.Locator.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.CSharp.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Caching.Abstractions.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Caching.Memory.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.DependencyModel.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Logging.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Options.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Logging.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.OpenApi.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Mono.TextTemplating.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Newtonsoft.Json.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Npgsql.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.AspNetCore.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Extensions.Hosting.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Extensions.Logging.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Formatting.Compact.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Settings.Configuration.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Sinks.Async.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Sinks.Console.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Sinks.Debug.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Sinks.File.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/System.CodeDom.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/System.Composition.AttributedModel.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/System.Composition.Convention.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/System.Composition.Hosting.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/System.Composition.Runtime.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/System.Composition.TypedParts.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/System.Configuration.ConfigurationManager.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/System.Management.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/System.Net.WebSockets.WebSocketProtocol.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/System.Security.Cryptography.ProtectedData.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/System.Security.Permissions.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/runtimes/win/lib/net7.0/System.Management.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/bin/Debug/net9.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.csproj.AssemblyReference.cache
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/rpswa.dswa.cache.json
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.GeneratedMSBuildEditorConfig.editorconfig
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.AssemblyInfoInputs.cache
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.AssemblyInfo.cs
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.csproj.CoreCompileInputs.cache
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.MvcApplicationPartsAssemblyInfo.cs
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.MvcApplicationPartsAssemblyInfo.cache
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.sourcelink.json
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/rjimswa.dswa.cache.json
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/rjsmrazor.dswa.cache.json
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/scopedcss/bundle/FitnessTrackerAPI.styles.css
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/staticwebassets.build.json
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/staticwebassets.build.json.cache
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/staticwebassets.development.json
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/staticwebassets.build.endpoints.json
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/FitnessT.EB8829A0.Up2Date
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/refint/FitnessTrackerAPI.dll
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.pdb
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.genruntimeconfig.cache
+/Users/presidio/Desktop/GensparkTraining/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/ref/FitnessTrackerAPI.dll
+/Users/presidio/Desktop/Axure/Azure Repository/Fitness%20Tracker/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.dll
+/Users/presidio/Desktop/Axure/Azure Repository/Fitness%20Tracker/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/refint/FitnessTrackerAPI.dll
+/Users/presidio/Desktop/Axure/Azure Repository/Fitness%20Tracker/Fitness Tracker API/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.pdb
+/Users/presidio/Desktop/Axure/Azure Repository/Fitness%20Tracker/FitnessTrackerAPI/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.dll
+/Users/presidio/Desktop/Axure/Azure Repository/Fitness%20Tracker/FitnessTrackerAPI/FitnessTrackerAPI/obj/Debug/net9.0/refint/FitnessTrackerAPI.dll
+/Users/presidio/Desktop/Axure/Azure Repository/Fitness%20Tracker/FitnessTrackerAPI/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.pdb
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/appsettings.Development.json
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/appsettings.json
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/FitnessTrackerAPI.staticwebassets.endpoints.json
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/FitnessTrackerAPI
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/FitnessTrackerAPI.deps.json
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/FitnessTrackerAPI.runtimeconfig.json
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/FitnessTrackerAPI.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/FitnessTrackerAPI.pdb
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/AutoMapper.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/AWSSDK.Core.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/AWSSDK.Extensions.NETCore.Setup.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/AWSSDK.S3.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/AWSSDK.SimpleEmail.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/BCrypt.Net-Next.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Google.Apis.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Google.Apis.Auth.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Google.Apis.Core.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Humanizer.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/log4net.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.Google.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.AspNetCore.Mvc.Versioning.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.AspNetCore.OpenApi.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Bcl.AsyncInterfaces.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Build.Locator.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.CSharp.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Caching.Abstractions.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Caching.Memory.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.DependencyModel.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Logging.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Options.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Logging.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.OpenApi.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Mono.TextTemplating.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Newtonsoft.Json.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Npgsql.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.AspNetCore.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Extensions.Hosting.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Extensions.Logging.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Formatting.Compact.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Settings.Configuration.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Sinks.Async.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Sinks.Console.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Sinks.Debug.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Sinks.File.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/System.CodeDom.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/System.Composition.AttributedModel.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/System.Composition.Convention.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/System.Composition.Hosting.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/System.Composition.Runtime.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/System.Composition.TypedParts.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/System.Configuration.ConfigurationManager.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/System.Management.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/System.Net.WebSockets.WebSocketProtocol.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/System.Security.Cryptography.ProtectedData.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/System.Security.Permissions.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/runtimes/win/lib/net7.0/System.Management.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.csproj.AssemblyReference.cache
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.GeneratedMSBuildEditorConfig.editorconfig
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.AssemblyInfoInputs.cache
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.AssemblyInfo.cs
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.csproj.CoreCompileInputs.cache
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.MvcApplicationPartsAssemblyInfo.cs
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.MvcApplicationPartsAssemblyInfo.cache
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.sourcelink.json
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/scopedcss/bundle/FitnessTrackerAPI.styles.css
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/staticwebassets.build.json
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/staticwebassets.build.json.cache
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/staticwebassets.development.json
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/staticwebassets.build.endpoints.json
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/FitnessT.EB8829A0.Up2Date
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/refint/FitnessTrackerAPI.dll
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.pdb
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.genruntimeconfig.cache
+/Users/presidio/Documents/FitnessTrackerAPI/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/ref/FitnessTrackerAPI.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/appsettings.Development.json
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/appsettings.json
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/FitnessTrackerAPI.staticwebassets.endpoints.json
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/FitnessTrackerAPI
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/FitnessTrackerAPI.deps.json
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/FitnessTrackerAPI.runtimeconfig.json
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/FitnessTrackerAPI.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/FitnessTrackerAPI.pdb
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/AutoMapper.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/AWSSDK.Core.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/AWSSDK.Extensions.NETCore.Setup.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/AWSSDK.S3.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/AWSSDK.SimpleEmail.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/BCrypt.Net-Next.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Google.Apis.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Google.Apis.Auth.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Google.Apis.Core.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Humanizer.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/log4net.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.Google.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.AspNetCore.Mvc.Versioning.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.AspNetCore.OpenApi.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Bcl.AsyncInterfaces.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Build.Locator.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.CSharp.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Caching.Abstractions.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Caching.Memory.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.DependencyModel.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Logging.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Logging.Log4Net.AspNetCore.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Options.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Logging.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Microsoft.OpenApi.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Mono.TextTemplating.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Newtonsoft.Json.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Npgsql.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.AspNetCore.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Extensions.Hosting.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Extensions.Logging.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Formatting.Compact.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Settings.Configuration.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Sinks.Async.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Sinks.Console.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Sinks.Debug.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Serilog.Sinks.File.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/System.CodeDom.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/System.Composition.AttributedModel.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/System.Composition.Convention.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/System.Composition.Hosting.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/System.Composition.Runtime.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/System.Composition.TypedParts.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/System.Configuration.ConfigurationManager.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/System.Management.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/System.Net.WebSockets.WebSocketProtocol.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/System.Security.Cryptography.ProtectedData.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/System.Security.Permissions.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/runtimes/win/lib/net7.0/System.Management.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/bin/Debug/net9.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.csproj.AssemblyReference.cache
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/rpswa.dswa.cache.json
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.GeneratedMSBuildEditorConfig.editorconfig
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.AssemblyInfoInputs.cache
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.AssemblyInfo.cs
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.csproj.CoreCompileInputs.cache
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.MvcApplicationPartsAssemblyInfo.cs
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.MvcApplicationPartsAssemblyInfo.cache
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.sourcelink.json
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/rjimswa.dswa.cache.json
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/rjsmrazor.dswa.cache.json
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/scopedcss/bundle/FitnessTrackerAPI.styles.css
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/staticwebassets.build.json
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/staticwebassets.build.json.cache
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/staticwebassets.development.json
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/staticwebassets.build.endpoints.json
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/FitnessT.EB8829A0.Up2Date
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/refint/FitnessTrackerAPI.dll
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.pdb
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/FitnessTrackerAPI.genruntimeconfig.cache
+/Users/presidio/Desktop/Axure/Azure Repository/FitnessTracker/FitnessTrackerBE/FitnessTrackerAPI/obj/Debug/net9.0/ref/FitnessTrackerAPI.dll

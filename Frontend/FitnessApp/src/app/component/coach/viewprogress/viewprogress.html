@@ -1,0 +1,108 @@
+<div class="container py-5">
+  <h2 class="fw-bold text-center mb-5">Client Progress Dashboard</h2>
+
+  <!-- Charts -->
+  <div class="row g-4 mb-4">
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm border-0">
+        <div
+          class="card-header fw-bold d-flex justify-content-between align-items-center"
+        >
+          📈 Weight & Height Over Time
+          <select
+            class="form-select w-auto"
+            [(ngModel)]="selectedView"
+            (change)="setupAllCharts()"
+          >
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+          </select>
+        </div>
+        <div class="card-body">
+          <canvas
+            baseChart
+            [data]="weightHeightChartData"
+            [type]="'line'"
+            class="w-100"
+          ></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="col-md-6">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-header fw-bold">📊 Progress Percentage Per Plan</div>
+        <div class="card-body">
+          <canvas
+            baseChart
+            [data]="planProgressChartData"
+            [type]="'bar'"
+            class="w-100"
+          ></canvas>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <div class="col-md-6">
+      <div class="card h-100 shadow-sm border-0">
+        <div class="card-header fw-bold">🔥 Calories Intake vs Burnt (Bar)</div>
+        <div class="card-body">
+          <canvas
+            baseChart
+            [data]="caloriesChartData"
+            [type]="'bar'"
+            class="w-100"
+          ></canvas>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="col-md-6">
+      <div class="card h-100 shadow-sm border-0 d-flex align-items-center">
+        <div class="card-header fw-bold text-center w-100">
+          🔥 Calories Intake vs Burnt
+        </div>
+        <div
+          class="card-body d-flex align-items-center justify-content-center"
+          style="width: 350px; height: 350px"
+        >
+          <canvas
+            baseChart
+            [data]="calorieLineChartData"
+            [type]="'pie'"
+            [options]="{ plugins: { legend: { position: 'bottom' } } }"
+            style="width: 250px; height: 200px"
+          ></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Compare & View All Button -->
+  <div class="text-center mt-3 d-flex justify-content-center gap-2">
+    <button
+      class="btn"
+      [ngClass]="{ 'btn-primary': showComparison, 'btn-outline-secondary': !showComparison }"
+      (click)="onCompare()"
+    >
+      Compare Weekly/Monthly Photos
+    </button>
+    <button
+      class="btn"
+      [ngClass]="{ 'btn-primary': showGallery, 'btn-outline-secondary': !showGallery }"
+      (click)="toggleGallery()"
+    >
+      Show All Progress Photos
+    </button>
+  </div>
+
+  <app-stats-photos
+    [proImages]="proImages()"
+    [groupedImages]="groupedImages"
+    [selectedGrouping]="selectedGrouping"
+    [showGallery]="showGallery"
+    [showComparison]="showComparison"
+    [groupImagesByTimeFrame]="groupImagesByTimeFrame.bind(this)"
+  ></app-stats-photos>
+</div>

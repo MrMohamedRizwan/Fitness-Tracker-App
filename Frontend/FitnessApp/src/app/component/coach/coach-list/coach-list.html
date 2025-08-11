@@ -1,0 +1,56 @@
+<div class="container my-4">
+  <h2 class="mb-4 text-primary text-center">Admin Dashboard</h2>
+
+    <div class="mb-4 text-center">
+    <label for="delegateDate" class="form-label fw-bold">Delegate Until: </label>
+    <input
+        id="delegateDate"
+        type="date"
+        class="form-control w-auto d-inline-block"
+        [(ngModel)]="delegateUntilDate"
+        name="delegateDate"
+        required
+    />
+    </div>
+  <!-- Section: Coaches -->
+  <div class="mb-5">
+    <h4 class="text-secondary mb-3">
+      <i class="bi bi-person-badge-fill me-2"></i>All Coaches
+    </h4>
+
+    <div *ngIf="!coaches()?.length" class="text-muted text-center">
+      No coaches found.
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+      <div class="col" *ngFor="let coach of coaches()">
+        <div *ngIf="coach.isActive && coach.email != email"  class="card h-100 shadow-sm border-0">
+          <div class="card-body">
+            <h5 class="card-title text-dark d-flex align-items-center">
+              <i class="bi bi-person-circle me-2 fs-4 text-primary"></i>
+              {{ coach.name }}
+            </h5>
+            <p class="card-text text-muted mb-1">
+              <strong>Email:</strong> {{ coach.email }}
+            </p>
+            <p class="card-text text-muted mb-0">
+              <strong>Experience:</strong> {{ coach.yearsOfExperience }} years
+            </p>
+          </div>
+          <div
+            class="card-footer bg-white border-top-0 d-flex justify-content-end gap-2"
+          >
+          <button
+            class="btn btn-primary btn-sm"
+            (click)="delegateCoach(coach.id)"
+            [disabled]="!delegateUntilDate"
+            >
+            Select
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

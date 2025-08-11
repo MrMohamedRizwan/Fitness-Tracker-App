@@ -1,0 +1,59 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar (fixed width) -->
+    <!-- Sidebar (fixed width) -->
+    <!-- Sidebar (left) -->
+    <div
+      class="col-md-3 col-lg-2 bg-light min-vh-100 p-0 shadow"
+      style="width: max-content"
+    >
+      <nav class="d-none d-md-block">
+        <app-client-sidebar></app-client-sidebar>
+      </nav>
+      <nav class="d-block d-md-none">
+        <!-- Optional: Add a button to toggle sidebar on mobile -->
+        <button
+          class="btn m-2"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileSidebar"
+          aria-controls="mobileSidebar"
+        >
+          <i class="bi bi-list" style="font-size: 1.5rem"></i>
+        </button>
+        <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="mobileSidebar"
+          aria-labelledby="mobileSidebarLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="mobileSidebarLabel">Menu</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body p-0">
+            <app-client-sidebar></app-client-sidebar>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Page content (right) -->
+    <div
+      class="col p-4"
+      style="
+        max-height: calc(95vh);
+        overflow-y: auto;
+        scrollbar-width: 1px;
+        -ms-overflow-style: none;
+      "
+    >
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
